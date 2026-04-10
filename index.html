@@ -120,7 +120,7 @@ function draw(t){
 resize();initStars();requestAnimationFrame(draw);
 window.addEventListener('resize',()=>{resize();if(!warpActive)initStars();});
 function activateWarp(){
-  if(warpActive)return;warpActive=true;
+  if(warpActive)return;warpActive=false; // icons only — no star warp on Gateway
   S.forEach(s=>{const dx=s.x-canvas.width/2,dy=s.y-canvas.height/2,dist=Math.sqrt(dx*dx+dy*dy)||1,spd=0.5+Math.random()*1.8;s.vx=(dx/dist)*spd;s.vy=(dy/dist)*spd;});
   ['ripple1','ripple2','ripple3'].forEach((id,i)=>setTimeout(()=>{const r=document.getElementById(id);r.classList.remove('active');void r.offsetWidth;r.classList.add('active');},i*200));
   const btn=document.getElementById('activateBtn');btn.disabled=true;btn.classList.add('warping');btn.textContent='Entering... ✦';document.getElementById('coreSphere').classList.add('brightened');
