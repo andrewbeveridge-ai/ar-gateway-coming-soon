@@ -87,7 +87,7 @@
     <span class="p-mob">◆&nbsp; Learn Faster<br>◆&nbsp; Earn More<br>◆&nbsp; AI Powered</span>
   </p>
   <div class="activate-wrap">
-    <button class="activate-btn" id="activateBtn" onclick="activateWarp()">Enter The Gateway Realm</button>
+    <button class="activate-btn" id="activateBtn" onclick="activateWarp()" data-label="Enter The Gateway Realm">Enter The Gateway Realm</button>
     <div class="ripple" id="ripple1"></div>
     <div class="ripple" id="ripple2"></div>
     <div class="ripple" id="ripple3"></div>
@@ -106,7 +106,7 @@
 </main>
 <footer class="site-footer">&copy; 2026 Another Realm AI International, Inc. &nbsp;|&nbsp; anotherrealmgateway.com</footer>
 <script>
-/* ── Star field — passive background, never warps ── */
+/* ── Star field — passive twinkling background ── */
 const canvas=document.getElementById('starCanvas'),ctx=canvas.getContext('2d');
 let S=[];
 function resize(){canvas.width=innerWidth;canvas.height=innerHeight;}
@@ -116,28 +116,27 @@ resize();initStars();requestAnimationFrame(drawStars);
 window.addEventListener('resize',()=>{resize();initStars();});
 
 /* ── Icon Definitions ── */
-const ICON_SVGS = [
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2a2.5 2.5 0 0 1 5 0v.5A1.5 1.5 0 0 0 16 4a3 3 0 0 1 3 3v.5a1.5 1.5 0 0 0 1.5 1.5A2 2 0 0 1 22 11v1a2 2 0 0 1-1.5 1.937V14a3 3 0 0 1-3 3h-.5a1.5 1.5 0 0 0-1.5 1.5 2.5 2.5 0 0 1-5 0A1.5 1.5 0 0 0 9 17h-.5a3 3 0 0 1-3-3v-.063A2 2 0 0 1 4 12v-1a2 2 0 0 1 1.5-1.937V8.5A1.5 1.5 0 0 0 4 7a3 3 0 0 1 3-3 1.5 1.5 0 0 0 1.5-1.5z"/><circle cx="12" cy="12" r="2"/></svg>',
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>',
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>',
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="8" height="8" rx="1"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/><path d="M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M19.07 4.93l-2.83 2.83M7.76 16.24l-2.83 2.83"/></svg>',
-  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>',
+const ICON_DEFS=[
+  {litColor:'#00CED1',count:4,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/></svg>'},
+  {litColor:'#FFD700',count:4,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>'},
+  {litColor:'#FF6EC7',count:3,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>'},
+  {litColor:'#39FF14',count:3,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg>'},
+  {litColor:'#BF5FFF',count:3,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'},
+  {litColor:'#F97316',count:3,svg:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>'}
 ];
-const ICON_COLORS = ['#00CED1','#FFD700','#F97316','#39FF14','#BF5FFF','#FF6EC7'];
 
-/* ── Floating ambient icons (passive background) ── */
-const iconLayer = document.getElementById('iconLayer');
-const floatIcons = [];
+/* ── Floating ambient icons ── */
+const iconLayer=document.getElementById('iconLayer');
+const floatIcons=[];
 (function(){
-  ICON_SVGS.forEach((svg, si) => {
-    for(let i=0;i<4;i++){
+  ICON_DEFS.forEach(def=>{
+    for(let i=0;i<def.count;i++){
       const el=document.createElement('div');
-      el.className='float-icon';el.innerHTML=svg;
-      el.style.color=ICON_COLORS[si];
+      el.className='float-icon';el.innerHTML=def.svg;
+      el.style.color=def.litColor;
       const obj={el,x:Math.random()*innerWidth,y:Math.random()*innerHeight,
-        vx:((Math.random()-.5)*1.2)||(0.4),vy:((Math.random()-.5)*1.2)||(0.4),
-        ph:Math.random()*Math.PI*2,color:ICON_COLORS[si],warping:false};
+        vx:((Math.random()-.5)*1.0)||(0.3),vy:((Math.random()-.5)*1.0)||(0.3),
+        ph:Math.random()*Math.PI*2,color:def.litColor,warping:false};
       el.style.left=obj.x+'px';el.style.top=obj.y+'px';
       iconLayer.appendChild(el);floatIcons.push(obj);
     }
@@ -145,7 +144,6 @@ const floatIcons = [];
   function tick(t){
     floatIcons.forEach(ic=>{
       if(!ic.warping){
-        // Passive float
         ic.x+=ic.vx;ic.y+=ic.vy;
         if(ic.x<-40)ic.x=innerWidth+20;if(ic.x>innerWidth+40)ic.x=-20;
         if(ic.y<-40)ic.y=innerHeight+20;if(ic.y>innerHeight+40)ic.y=-20;
@@ -154,22 +152,17 @@ const floatIcons = [];
         ic.el.style.transform='scale(1)';
         ic.el.style.filter='none';
       } else {
-        // Warp toward user — move outward from center, scale up
-        const cx=innerWidth/2, cy=innerHeight/2;
-        const dx=ic.x-cx, dy=ic.y-cy;
+        const cx=innerWidth/2,cy=innerHeight/2;
+        const dx=ic.x-cx,dy=ic.y-cy;
         const dist=Math.sqrt(dx*dx+dy*dy)||1;
-        const speed=ic.warpSpd*(1+dist/350); // accelerate as they move out
+        const speed=ic.warpSpd*(1+dist/400);
         ic.x+=ic.wvx*speed;ic.y+=ic.wvy*speed;
-        // Scale up proportional to distance from center (perspective)
-        const sc=Math.max(0.4,Math.min(5.0,dist/60));
+        const sc=Math.max(0.5,Math.min(2.5,dist/100));
         ic.el.style.transform=`scale(${sc})`;
-        ic.el.style.opacity=Math.min(0.95, dist/120);
+        ic.el.style.opacity=String(Math.min(0.85,dist/150));
         ic.el.style.left=ic.x+'px';ic.el.style.top=ic.y+'px';
-        ic.el.style.filter=`drop-shadow(0 0 ${6*sc}px ${ic.color})`;
-        // Reset when off screen
-        if(ic.x<-80||ic.x>innerWidth+80||ic.y<-80||ic.y>innerHeight+80){
-          resetWarpIcon(ic);
-        }
+        ic.el.style.filter=`drop-shadow(0 0 ${4*sc}px ${ic.color})`;
+        if(ic.x<-80||ic.x>innerWidth+80||ic.y<-80||ic.y>innerHeight+80)resetWarpIcon(ic);
       }
       ic.ph+=0.006;
     });
@@ -179,55 +172,75 @@ const floatIcons = [];
 })();
 
 function resetWarpIcon(ic){
-  // Respawn near center with outward velocity
   const cx=innerWidth/2,cy=innerHeight/2;
   const angle=Math.random()*Math.PI*2;
-  const r=Math.random()*30+5;
-  ic.x=cx+Math.cos(angle)*r;
-  ic.y=cy+Math.sin(angle)*r;
-  ic.wvx=Math.cos(angle);
-  ic.wvy=Math.sin(angle);
-  ic.warpSpd=0.6+Math.random()*0.8;
-  ic.el.style.left=ic.x+'px';
-  ic.el.style.top=ic.y+'px';
+  const r=Math.random()*20+5;
+  ic.x=cx+Math.cos(angle)*r;ic.y=cy+Math.sin(angle)*r;
+  ic.wvx=Math.cos(angle);ic.wvy=Math.sin(angle);
+  ic.warpSpd=0.8+Math.random()*1.2;
+  ic.el.style.left=ic.x+'px';ic.el.style.top=ic.y+'px';
 }
-
 window.addEventListener('resize',()=>floatIcons.forEach(ic=>{
   if(ic.x>innerWidth)ic.x=Math.random()*innerWidth;
   if(ic.y>innerHeight)ic.y=Math.random()*innerHeight;
 }));
 
-/* ── Activate — icon warp tunnel toward user ── */
-let gatewayActive=false;
+/* ── Orbital ── */
+const movers=['m1','m2','m3','m4'].map(id=>document.getElementById(id));
+const coreEl=document.getElementById('coreSphere');
+const PATHS=[
+  [{tx:'0px',ty:'0px'},{tx:'calc(40vw - 110px)',ty:'calc(-22vh + 36px)'},{tx:'calc(40vw - 110px)',ty:'calc(22vh - 36px)'},{tx:'calc(-40vw + 110px)',ty:'calc(22vh - 36px)'},{tx:'calc(-40vw + 110px)',ty:'calc(-22vh + 36px)'}],
+  [{tx:'0px',ty:'0px'},{tx:'calc(-38vw + 95px)',ty:'calc(-20vh + 32px)'},{tx:'calc(-38vw + 95px)',ty:'calc(20vh - 32px)'},{tx:'calc(38vw - 95px)',ty:'calc(20vh - 32px)'},{tx:'calc(38vw - 95px)',ty:'calc(-20vh + 32px)'}],
+  [{tx:'0px',ty:'0px'},{tx:'0px',ty:'calc(-20vh + 28px)'},{tx:'calc(35vw - 70px)',ty:'0px'},{tx:'0px',ty:'calc(18vh - 28px)'},{tx:'calc(-35vw + 70px)',ty:'0px'}],
+  [{tx:'0px',ty:'0px'},{tx:'0px',ty:'calc(16vh - 23px)'},{tx:'calc(-32vw + 60px)',ty:'0px'},{tx:'0px',ty:'calc(-18vh + 23px)'},{tx:'calc(32vw - 60px)',ty:'0px'}],
+];
+const ks=document.createElement('style');document.head.appendChild(ks);
+function iKF(n,p){const f=p.map((pt,i)=>`${[0,25,50,75,100][i]}%{transform:translate(${pt.tx},${pt.ty});opacity:${i===0?1:0.45};}`).join(' ');try{ks.sheet.insertRule(`@keyframes ${n}{${f}}`,ks.sheet.cssRules.length);}catch(e){}}
+function iRK(n,e){try{ks.sheet.insertRule(`@keyframes ${n}{0%{transform:translate(${e.tx},${e.ty});opacity:0.45;}100%{transform:translate(0px,0px);opacity:1;}}`,ks.sheet.cssRules.length);}catch(e){}}
+PATHS.forEach((p,i)=>{iKF(`orbit${i+1}`,p);iRK(`ret${i+1}`,p[4]);});
+let cyc=false;
+function cycle(){
+  if(cyc)return;cyc=true;
+  setTimeout(()=>movers.forEach((m,i)=>{m.style.transition='none';m.style.animation=`orbit${i+1} 8s linear forwards`;}),5000);
+  const rb=13000;
+  [3,2,1,0].forEach((mi,step)=>setTimeout(()=>{movers[mi].style.animation=`ret${mi+1} 1800ms cubic-bezier(0.25,0.1,0.25,1) forwards`;if(mi===2)coreEl.classList.add('brightened');},rb+step*600));
+  setTimeout(()=>{movers.forEach(m=>{m.style.animation='none';m.style.transition='opacity .5s';m.style.opacity='1';m.style.transform='translate(0px,0px)';});coreEl.classList.remove('brightened');cyc=false;setTimeout(cycle,5000);},rb+3*600+2000+200);
+}
+setTimeout(cycle,3000);
+
+/* ── Activate — icons fly toward user ── */
+let activated=false;
 function activateWarp(){
-  if(gatewayActive)return;gatewayActive=true;
+  if(activated)return;activated=true;
   ['ripple1','ripple2','ripple3'].forEach((id,i)=>setTimeout(()=>{
     const r=document.getElementById(id);r.classList.remove('active');void r.offsetWidth;r.classList.add('active');
   },i*200));
   const btn=document.getElementById('activateBtn');
   btn.disabled=true;btn.classList.add('warping');
-  btn.textContent='Gateway Activated ✦';
+  btn.textContent='Activated ✦';
   document.getElementById('coreSphere').classList.add('brightened');
-  // Launch all icons outward from center
-  floatIcons.forEach((ic,idx)=>setTimeout(()=>{
-    ic.warping=true;
-    resetWarpIcon(ic);
-  },idx*35));
-  // Auto-reset after 7s
+  floatIcons.forEach((ic,idx)=>setTimeout(()=>{ic.warping=true;resetWarpIcon(ic);},idx*40));
   setTimeout(()=>{
-    floatIcons.forEach(ic=>{
-      ic.warping=false;
-      ic.el.style.transform='scale(1)';
-      ic.el.style.filter='none';
-      ic.el.style.opacity='0.07';
-    });
+    floatIcons.forEach(ic=>{ic.warping=false;ic.el.style.transform='scale(1)';ic.el.style.filter='none';ic.el.style.opacity='0.07';});
     document.getElementById('coreSphere').classList.remove('brightened');
-    setTimeout(()=>{
-      btn.textContent='Enter The Gateway Realm';
-      btn.classList.remove('warping');btn.disabled=false;gatewayActive=false;
-    },500);
+    setTimeout(()=>{btn.textContent=btn.dataset.label;btn.classList.remove('warping');btn.disabled=false;activated=false;},500);
   },7000);
 }
+
+/* ── Email ── */
+const SU='https://script.google.com/macros/s/AKfycbxr-7JSECtFFEY84AIi31Vib3TxdUT71N8-fBeJmYCdAXozSxri-r_LFJvJ4p_dvA3eZw/exec';
+async function submitEmail(){
+  const inp=document.getElementById('emailInput'),btn=inp.nextElementSibling,email=inp.value.trim();
+  const emailRe=/^[^\s@]+@[^\s@]+\.[a-zA-Z]{2,}$/;
+  if(!email||!emailRe.test(email)){showErr('Please enter a valid email (e.g. name@domain.com)');return;}
+  const orig=btn.textContent;btn.textContent='...';btn.disabled=true;let ok=false;
+  if(SU){try{const url=SU+'?email='+encodeURIComponent(email)+'&venture='+encodeURIComponent('Another Realm Gateway')+'&source='+encodeURIComponent(location.hostname);await fetch(url,{mode:'no-cors'});ok=true;}catch(_){}}
+  if(!ok){try{const fd=new FormData();fd.append('form-name','gateway-waitlist');fd.append('venture','Another Realm Gateway');fd.append('email',email);const r=await fetch('/',{method:'POST',body:fd});if(r.ok)ok=true;}catch(_){ok=true;}}
+  if(ok){document.getElementById('inputRow').style.display='none';document.getElementById('successMsg').style.display='block';}
+  else{btn.textContent=orig;btn.disabled=false;showErr('Something went wrong. Try again.');}
+}
+function showErr(m){const e=document.getElementById('errorMsg');e.textContent=m;e.style.display='block';setTimeout(()=>e.style.display='none',4000);}
+document.getElementById('emailInput').addEventListener('keydown',e=>{if(e.key==='Enter')submitEmail();});
 </script>
 </body>
 </html>
