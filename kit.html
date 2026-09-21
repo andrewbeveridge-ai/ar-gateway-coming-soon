@@ -45,12 +45,12 @@ mark{background:var(--mark);color:var(--ink);padding:1px 4px;font-weight:600}
 <main class="kwrap" style="padding-top:36px;padding-bottom:40px">
 <span class="label">AI Starter Kit · Companion</span>
 <h1 style="font-size:clamp(34px,7vw,48px);margin:16px 0 14px">Your ten prompts, <em class="i">ready to copy.</em></h1>
-<p class="lede">Tap <strong style="color:var(--ink)">Copy prompt</strong>, paste it into whichever AI you use, and fill in the highlighted parts.</p>
+<p class="lede">Tap <strong style="color:var(--ink)">Copy prompt</strong>, paste it into whichever AI you use, and fill in the highlighted parts. <a href="#kit" style="font-weight:600;white-space:nowrap">Don&rsquo;t have the full kit? Get it free &rarr;</a></p>
 <div class="how"><ol>
 <li>Tap <strong style="color:var(--ink)">Copy prompt</strong> on the one you want.</li>
 <li>Open your AI app and paste.</li>
 <li>Replace everything in <mark>[brackets]</mark> with your real details. The more specific, the better the answer.</li></ol>
-<div class="apps"><a href="https://chatgpt.com" target="_blank" rel="noopener">Open ChatGPT</a><a href="https://claude.ai" target="_blank" rel="noopener">Open Claude</a><a href="https://gemini.google.com" target="_blank" rel="noopener">Open Gemini</a><a href="https://copilot.microsoft.com" target="_blank" rel="noopener">Open Copilot</a></div></div>
+<div class="apps"><a href="https://chatgpt.com" target="_blank" rel="noopener">Open ChatGPT</a><a href="https://claude.ai" target="_blank" rel="noopener">Open Claude</a><a href="https://gemini.google.com" target="_blank" rel="noopener">Open Gemini</a><a href="https://copilot.microsoft.com" target="_blank" rel="noopener">Open Copilot</a><a href="https://grok.com" target="_blank" rel="noopener">Open Grok</a></div></div>
 <nav class="jump" aria-label="Jump to a prompt"><a href="#p1">01</a><a href="#p2">02</a><a href="#p3">03</a><a href="#p4">04</a><a href="#p5">05</a><a href="#p6">06</a><a href="#p7">07</a><a href="#p8">08</a><a href="#p9">09</a><a href="#p10">10</a></nav>
 
 <article class="p" id="p1">
@@ -123,12 +123,27 @@ mark{background:var(--mark);color:var(--ink);padding:1px 4px;font-weight:600}
   <textarea class="raw" id="r10" aria-hidden="true" tabindex="-1">Here&#x27;s something I wrote: [paste — resume, post, email, essay]. Its goal is [what it needs to do]. Be a tough but fair editor: list the 3 biggest problems in order of importance, explain why each one hurts, then give me a revised version that fixes them. Don&#x27;t soften the feedback.</textarea>
   <button class="btn copy" data-n="10" type="button">Copy prompt</button>
 </article>
+<div style="margin-top:36px"><div class="card" id="kit">
+<span class="label">Free</span>
+<div class="card-title">Got this link from a friend? Get the full kit.</div>
+<p class="small">A short, practical guide &mdash; built to be used, not skimmed.</p>
+<ul class="list"><li><span class="n">1</span>The four-part formula that fixes generic answers</li><li><span class="n">2</span>Ten copy-and-paste prompts for work, job hunting and life</li><li><span class="n">3</span>Which AI to use, and what each one really costs</li><li><span class="n">4</span>A one-page cheat sheet to print and keep</li></ul>
+<form data-lead data-source="web:starter" novalidate>
+<label for="email-web:starter" class="small" style="position:absolute;left:-9999px">Email address</label>
+<input type="email" id="email-web:starter" placeholder="Your email address" autocomplete="email" inputmode="email" required>
+<input type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn" type="submit">Get my free kit</button>
+</form>
+<div class="msg ok" role="status"></div>
+<div class="msg err" role="alert"></div>
+<p class="small" style="margin-top:14px">Instant download, plus the links in your inbox. After that, a few short emails with techniques you can use the same day. One click to unsubscribe.</p>
+</div></div>
 <div class="tipbox"><strong>Try this once: the same prompt in two AIs</strong>Copy any prompt above and paste the exact same text into two different AI tools. Read the answers side by side &mdash; you&rsquo;ll see immediately which one sounds more like you, and that&rsquo;s the one to use for writing. <a href="/taste-test" style="font-weight:600">Try the guided AI taste test &rarr;</a></div>
 </main>
 <footer class="site-foot"><div class="wrap">
 <span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
 <span><a href="/mission">Mission</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp; <a href="mailto:hello@anotherrealmgateway.com">hello@anotherrealmgateway.com</a></span>
-</div></footer><script>
+</div></footer><script src="/assets/lead.js" defer></script><script>
 function copyText(n){var raw=document.getElementById('r'+n),t=raw.value;
  if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t).then(function(){return true},function(){return fb()})}return Promise.resolve(fb());
  function fb(){raw.style.position='fixed';raw.style.left='0';raw.focus();raw.select();raw.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}raw.style.position='absolute';raw.style.left='-9999px';raw.blur();return ok}}
