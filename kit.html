@@ -3,176 +3,137 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#FBF7EF">
-<meta name="robots" content="noindex">
+<meta name="theme-color" content="#F6F3EC">
 <title>Your 10 prompts — AI Starter Kit</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="description" content="Copy-ready prompts from the free AI Starter Kit.">
+<meta property="og:title" content="Your 10 prompts — AI Starter Kit">
+<meta property="og:description" content="Copy-ready prompts from the free AI Starter Kit.">
+<meta property="og:url" content="https://anotherrealmgateway.com/kit">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.ico">
 <style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--ink:#14213D;--accent:#FF6E4A;--bg:#FBF7EF;--card:#FFFFFF;--line:#E5DCCB;--muted:#5B6480;--mark:#FFE6DE}
-html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{background:var(--bg);color:var(--ink);font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:500;line-height:1.6;-webkit-font-smoothing:antialiased}
-.wrap{max-width:760px;margin:0 auto;padding:0 18px}
-header{border-top:4px solid var(--ink);padding:28px 0 8px}
-.brand{display:flex;align-items:center;gap:9px;font-weight:700;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;color:var(--ink)}
-.dot{width:13px;height:13px;border:2.5px solid var(--accent);border-radius:50%;display:inline-block}
-h1{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:clamp(30px,7vw,44px);line-height:1.05;letter-spacing:-.02em;margin:22px 0 12px}
-.lede{color:var(--muted);font-size:16.5px;max-width:52ch}
-.how{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:22px 0 10px;font-size:15px}
-.how ol{margin-left:20px}
-.how li{padding:3px 0}
-.how mark{background:var(--mark);color:var(--ink);padding:0 3px;border-radius:3px;font-weight:700}
-.apps{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 6px}
-.apps a{font-size:13.5px;font-weight:700;text-decoration:none;color:var(--ink);border:1.5px solid var(--line);background:var(--card);border-radius:999px;padding:8px 14px}
+.kwrap{max-width:760px;margin:0 auto;padding:0 18px}
+.how{background:var(--paper);border:1px solid var(--rule);padding:20px 22px;margin:26px 0 12px;font-size:17px}
+.how ol{margin-left:22px}.how li{padding:4px 0}
+mark{background:var(--mark);color:var(--ink);padding:1px 4px;font-weight:600}
+.apps{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.apps a{font-size:15px;font-weight:600;color:var(--ink);text-decoration:none;border:1px solid var(--rule);background:var(--bg);padding:10px 14px;min-height:44px;display:inline-flex;align-items:center}
 .apps a:hover{border-color:var(--ink)}
-.jump{display:flex;flex-wrap:wrap;gap:6px;margin:18px 0 8px}
-.jump a{font-size:13px;font-weight:700;text-decoration:none;color:var(--muted);background:#F3EDE2;border-radius:6px;padding:5px 9px}
-.p{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px 18px 18px;margin:16px 0;scroll-margin-top:16px;box-shadow:0 1px 2px rgba(20,33,61,.05)}
-.ph{display:flex;gap:12px;align-items:flex-start}
-.num{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:24px;color:var(--accent);line-height:1.1;min-width:32px}
-.p h2{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:20px;line-height:1.2;letter-spacing:-.01em}
-.tag{display:inline-block;font-size:10.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-top:4px}
-.why{color:var(--muted);font-size:14.5px;margin:10px 0 12px}
-.txt{font-size:15.5px;line-height:1.65;background:#FAF7F1;border:1px solid var(--line);border-radius:10px;padding:14px 15px;white-space:normal}
-.txt mark{background:var(--mark);color:var(--ink);padding:1px 3px;border-radius:3px;font-weight:700}
+.jump{display:flex;flex-wrap:wrap;gap:6px;margin:20px 0 6px}
+.jump a{font-size:15px;font-weight:600;color:var(--body);text-decoration:none;border:1px solid var(--rule);padding:8px 12px;min-width:44px;text-align:center}
+.p{background:var(--paper);border:1px solid var(--rule);padding:24px 20px 20px;margin:16px 0;scroll-margin-top:90px}
+.ph{display:flex;gap:14px;align-items:flex-start}
+.num{font-family:var(--serif);font-size:26px;color:var(--accent);line-height:1.1;min-width:34px}
+.p h2{font-size:24px;line-height:1.2}
+.tag{display:inline-block;font-size:14px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-top:4px}
+.why{font-size:17px;margin:12px 0 14px}
+.ptxt{font-size:17px;line-height:1.65;color:var(--ink);background:var(--bg);border:1px solid var(--rule);padding:16px 17px}
 .raw{position:absolute;left:-9999px;top:0;opacity:0;height:1px;width:1px}
-.copy{margin-top:12px;width:100%;min-height:52px;border:0;border-radius:10px;background:var(--ink);color:#fff;font-family:'Manrope',sans-serif;font-weight:800;font-size:16px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .15s}
-.copy.done{background:#1B5E33}
-.tip{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:10px;padding:16px 18px;margin:26px 0;font-size:15px}
-.tip b{font-family:'Bricolage Grotesque',sans-serif;font-size:17px;display:block;margin-bottom:4px}
-footer{color:var(--muted);font-size:13px;padding:24px 0 48px;border-top:1px solid var(--line);margin-top:26px}
-footer a{color:var(--ink)}
+.copy{width:100%;margin-top:14px}
+.copy.done{background:var(--ok-fg);border-color:var(--ok-fg)}
+.tipbox{background:var(--paper);border:1px solid var(--rule);border-left:3px solid var(--accent);padding:20px 22px;margin:28px 0;font-size:17px}
+.tipbox strong{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--ink);display:block;margin-bottom:6px}
 </style>
 </head>
-<body>
-<div class="wrap">
-<header><a class="brand" href="/"><span class="dot"></span>Another Realm Gateway</a></header>
-
-<h1>Your 10 prompts, ready to copy</h1>
-<p class="lede">The companion to your AI Starter Kit. Tap <b>Copy prompt</b>, paste it into whatever AI you use, and fill in the highlighted parts.</p>
-
-<div class="how">
-  <ol>
-    <li>Tap <b>Copy prompt</b> on the one you want.</li>
-    <li>Open your AI app and paste.</li>
-    <li>Replace everything in <mark>[brackets]</mark> with your real details. The more specific, the better the answer.</li>
-  </ol>
-  <div class="apps">
-    <a href="https://chatgpt.com" target="_blank" rel="noopener">Open ChatGPT</a>
-    <a href="https://claude.ai" target="_blank" rel="noopener">Open Claude</a>
-    <a href="https://gemini.google.com" target="_blank" rel="noopener">Open Gemini</a>
-    <a href="https://copilot.microsoft.com" target="_blank" rel="noopener">Open Copilot</a>
-  </div>
-</div>
-
-<nav class="jump" aria-label="Jump to prompt"><a href="#p1">01</a><a href="#p2">02</a><a href="#p3">03</a><a href="#p4">04</a><a href="#p5">05</a><a href="#p6">06</a><a href="#p7">07</a><a href="#p8">08</a><a href="#p9">09</a><a href="#p10">10</a></nav>
+<body><header class="site-head"><div class="wrap"><a class="wordmark" href="/">Another Realm <em>Gateway</em></a></div></header>
+<main class="kwrap" style="padding-top:36px;padding-bottom:40px">
+<span class="label">AI Starter Kit · Companion</span>
+<h1 style="font-size:clamp(34px,7vw,48px);margin:16px 0 14px">Your ten prompts, <em class="i">ready to copy.</em></h1>
+<p class="lede">Tap <strong style="color:var(--ink)">Copy prompt</strong>, paste it into whichever AI you use, and fill in the highlighted parts.</p>
+<div class="how"><ol>
+<li>Tap <strong style="color:var(--ink)">Copy prompt</strong> on the one you want.</li>
+<li>Open your AI app and paste.</li>
+<li>Replace everything in <mark>[brackets]</mark> with your real details. The more specific, the better the answer.</li></ol>
+<div class="apps"><a href="https://chatgpt.com" target="_blank" rel="noopener">Open ChatGPT</a><a href="https://claude.ai" target="_blank" rel="noopener">Open Claude</a><a href="https://gemini.google.com" target="_blank" rel="noopener">Open Gemini</a><a href="https://copilot.microsoft.com" target="_blank" rel="noopener">Open Copilot</a></div></div>
+<nav class="jump" aria-label="Jump to a prompt"><a href="#p1">01</a><a href="#p2">02</a><a href="#p3">03</a><a href="#p4">04</a><a href="#p5">05</a><a href="#p6">06</a><a href="#p7">07</a><a href="#p8">08</a><a href="#p9">09</a><a href="#p10">10</a></nav>
 
 <article class="p" id="p1">
   <div class="ph"><span class="num">01</span><div><h2>The &quot;Interview Me First&quot;</h2><span class="tag">Any task</span></div></div>
   <p class="why">The single biggest upgrade. Instead of guessing, the AI pulls the context out of you.</p>
-  <div class="txt" id="t1">I want help with <mark>[the task — e.g. planning my kid&#x27;s birthday / writing a LinkedIn post / fixing my budget]</mark>. Before you give me anything, ask me up to 5 questions, one at a time, that you need answered to do this really well. After my last answer, give me your best version.</div>
+  <div class="ptxt">I want help with <mark>[the task — e.g. planning my kid&#x27;s birthday / writing a LinkedIn post / fixing my budget]</mark>. Before you give me anything, ask me up to 5 questions, one at a time, that you need answered to do this really well. After my last answer, give me your best version.</div>
   <textarea class="raw" id="r1" aria-hidden="true" tabindex="-1">I want help with [the task — e.g. planning my kid&#x27;s birthday / writing a LinkedIn post / fixing my budget]. Before you give me anything, ask me up to 5 questions, one at a time, that you need answered to do this really well. After my last answer, give me your best version.</textarea>
-  <button class="copy" data-n="1" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="1" type="button">Copy prompt</button>
 </article>
 <article class="p" id="p2">
   <div class="ph"><span class="num">02</span><div><h2>Explain It Like I&#x27;m New</h2><span class="tag">Learning</span></div></div>
   <p class="why">Learn anything — a new job skill, a medical bill, a lease — without feeling dumb.</p>
-  <div class="txt" id="t2">Explain <mark>[topic]</mark> to me like I&#x27;m smart but completely new to it. Use one everyday analogy, then give me the 3 things that actually matter and the 1 mistake beginners make. Finish with a 3-question quiz so I know I&#x27;ve got it.</div>
+  <div class="ptxt">Explain <mark>[topic]</mark> to me like I&#x27;m smart but completely new to it. Use one everyday analogy, then give me the 3 things that actually matter and the 1 mistake beginners make. Finish with a 3-question quiz so I know I&#x27;ve got it.</div>
   <textarea class="raw" id="r2" aria-hidden="true" tabindex="-1">Explain [topic] to me like I&#x27;m smart but completely new to it. Use one everyday analogy, then give me the 3 things that actually matter and the 1 mistake beginners make. Finish with a 3-question quiz so I know I&#x27;ve got it.</textarea>
-  <button class="copy" data-n="2" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="2" type="button">Copy prompt</button>
 </article>
 <article class="p" id="p3">
   <div class="ph"><span class="num">03</span><div><h2>The Resume Bullet Upgrade</h2><span class="tag">Job search</span></div></div>
   <p class="why">Turns &quot;responsible for&quot; duties into results a hiring manager actually notices.</p>
-  <div class="txt" id="t3">Act as a hiring manager for <mark>[target job title]</mark>. Here are bullets from my resume: <mark>[paste bullets]</mark>. Rewrite each one to lead with a strong verb and show a result. Where a number would help and I haven&#x27;t given one, ask me for it — don&#x27;t invent it. Show before and after side by side.</div>
+  <div class="ptxt">Act as a hiring manager for <mark>[target job title]</mark>. Here are bullets from my resume: <mark>[paste bullets]</mark>. Rewrite each one to lead with a strong verb and show a result. Where a number would help and I haven&#x27;t given one, ask me for it — don&#x27;t invent it. Show before and after side by side.</div>
   <textarea class="raw" id="r3" aria-hidden="true" tabindex="-1">Act as a hiring manager for [target job title]. Here are bullets from my resume: [paste bullets]. Rewrite each one to lead with a strong verb and show a result. Where a number would help and I haven&#x27;t given one, ask me for it — don&#x27;t invent it. Show before and after side by side.</textarea>
-  <button class="copy" data-n="3" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="3" type="button">Copy prompt</button>
 </article>
 <article class="p" id="p4">
   <div class="ph"><span class="num">04</span><div><h2>The Job Posting Decoder</h2><span class="tag">Job search</span></div></div>
   <p class="why">See what a posting is really asking for — and exactly where you match.</p>
-  <div class="txt" id="t4">Here&#x27;s a job posting: <mark>[paste posting]</mark>. And here&#x27;s my resume: <mark>[paste resume]</mark>. Give me: (1) the 5 things this employer cares about most, in plain English, (2) where I&#x27;m a strong match, with proof from my resume, (3) my honest gaps and how I could address each one in my application.</div>
+  <div class="ptxt">Here&#x27;s a job posting: <mark>[paste posting]</mark>. And here&#x27;s my resume: <mark>[paste resume]</mark>. Give me: (1) the 5 things this employer cares about most, in plain English, (2) where I&#x27;m a strong match, with proof from my resume, (3) my honest gaps and how I could address each one in my application.</div>
   <textarea class="raw" id="r4" aria-hidden="true" tabindex="-1">Here&#x27;s a job posting: [paste posting]. And here&#x27;s my resume: [paste resume]. Give me: (1) the 5 things this employer cares about most, in plain English, (2) where I&#x27;m a strong match, with proof from my resume, (3) my honest gaps and how I could address each one in my application.</textarea>
-  <button class="copy" data-n="4" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="4" type="button">Copy prompt</button>
 </article>
 <article class="p" id="p5">
   <div class="ph"><span class="num">05</span><div><h2>The Practice Interviewer</h2><span class="tag">Job search</span></div></div>
   <p class="why">Rehearse out loud with a patient interviewer who gives real feedback.</p>
-  <div class="txt" id="t5">Act as an interviewer for a <mark>[job title]</mark> role at a <mark>[type of company]</mark>. Ask me one interview question at a time — mix of behavioral and role-specific. After each answer, tell me what worked, what was weak, and show me a stronger version using my own details. Don&#x27;t move to the next question until I say &quot;next.&quot;</div>
+  <div class="ptxt">Act as an interviewer for a <mark>[job title]</mark> role at a <mark>[type of company]</mark>. Ask me one interview question at a time — mix of behavioral and role-specific. After each answer, tell me what worked, what was weak, and show me a stronger version using my own details. Don&#x27;t move to the next question until I say &quot;next.&quot;</div>
   <textarea class="raw" id="r5" aria-hidden="true" tabindex="-1">Act as an interviewer for a [job title] role at a [type of company]. Ask me one interview question at a time — mix of behavioral and role-specific. After each answer, tell me what worked, what was weak, and show me a stronger version using my own details. Don&#x27;t move to the next question until I say &quot;next.&quot;</textarea>
-  <button class="copy" data-n="5" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="5" type="button">Copy prompt</button>
 </article>
 <article class="p" id="p6">
   <div class="ph"><span class="num">06</span><div><h2>The Hard Email</h2><span class="tag">Everyday work</span></div></div>
   <p class="why">For the message you&#x27;ve been putting off: asking for a raise, pushing back, saying no.</p>
-  <div class="txt" id="t6">Help me write an email to <mark>[who — e.g. my manager / a landlord / a client]</mark>. Situation: <mark>[what happened]</mark>. What I want: <mark>[the outcome]</mark>. Give me 2 versions — one direct, one softer — each under 150 words. Sound like a calm, confident person, not a corporate robot.</div>
+  <div class="ptxt">Help me write an email to <mark>[who — e.g. my manager / a landlord / a client]</mark>. Situation: <mark>[what happened]</mark>. What I want: <mark>[the outcome]</mark>. Give me 2 versions — one direct, one softer — each under 150 words. Sound like a calm, confident person, not a corporate robot.</div>
   <textarea class="raw" id="r6" aria-hidden="true" tabindex="-1">Help me write an email to [who — e.g. my manager / a landlord / a client]. Situation: [what happened]. What I want: [the outcome]. Give me 2 versions — one direct, one softer — each under 150 words. Sound like a calm, confident person, not a corporate robot.</textarea>
-  <button class="copy" data-n="6" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="6" type="button">Copy prompt</button>
 </article>
 <article class="p" id="p7">
   <div class="ph"><span class="num">07</span><div><h2>Mess to Action List</h2><span class="tag">Everyday work</span></div></div>
   <p class="why">Meeting notes, voice memos, a chaotic group chat — turned into who does what by when.</p>
-  <div class="txt" id="t7">Below are my messy notes from <mark>[a meeting / a phone call / my brain dump]</mark>. Turn them into: (1) a 3-sentence summary, (2) a list of action items with who owns each and any deadline mentioned, (3) open questions nobody answered. If something&#x27;s unclear, flag it instead of guessing. Notes: <mark>[paste]</mark></div>
+  <div class="ptxt">Below are my messy notes from <mark>[a meeting / a phone call / my brain dump]</mark>. Turn them into: (1) a 3-sentence summary, (2) a list of action items with who owns each and any deadline mentioned, (3) open questions nobody answered. If something&#x27;s unclear, flag it instead of guessing. Notes: <mark>[paste]</mark></div>
   <textarea class="raw" id="r7" aria-hidden="true" tabindex="-1">Below are my messy notes from [a meeting / a phone call / my brain dump]. Turn them into: (1) a 3-sentence summary, (2) a list of action items with who owns each and any deadline mentioned, (3) open questions nobody answered. If something&#x27;s unclear, flag it instead of guessing. Notes: [paste]</textarea>
-  <button class="copy" data-n="7" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="7" type="button">Copy prompt</button>
 </article>
 <article class="p" id="p8">
   <div class="ph"><span class="num">08</span><div><h2>Plan My Week (For Real)</h2><span class="tag">Life</span></div></div>
   <p class="why">A schedule built around your actual energy and obligations, not an ideal robot&#x27;s.</p>
-  <div class="txt" id="t8">Help me plan next week. Fixed commitments: <mark>[work hours, kids&#x27; pickups, appointments]</mark>. Things I need to get done: <mark>[list]</mark>. I have the most energy <mark>[mornings / evenings]</mark>. Build a realistic day-by-day plan with buffer time, put the hardest task where my energy is highest, and tell me what to drop if the week goes sideways.</div>
+  <div class="ptxt">Help me plan next week. Fixed commitments: <mark>[work hours, kids&#x27; pickups, appointments]</mark>. Things I need to get done: <mark>[list]</mark>. I have the most energy <mark>[mornings / evenings]</mark>. Build a realistic day-by-day plan with buffer time, put the hardest task where my energy is highest, and tell me what to drop if the week goes sideways.</div>
   <textarea class="raw" id="r8" aria-hidden="true" tabindex="-1">Help me plan next week. Fixed commitments: [work hours, kids&#x27; pickups, appointments]. Things I need to get done: [list]. I have the most energy [mornings / evenings]. Build a realistic day-by-day plan with buffer time, put the hardest task where my energy is highest, and tell me what to drop if the week goes sideways.</textarea>
-  <button class="copy" data-n="8" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="8" type="button">Copy prompt</button>
 </article>
 <article class="p" id="p9">
   <div class="ph"><span class="num">09</span><div><h2>The Decision Helper</h2><span class="tag">Life</span></div></div>
   <p class="why">Stuck between options? Get the angles you haven&#x27;t considered — without it deciding for you.</p>
-  <div class="txt" id="t9">I&#x27;m deciding between <mark>[option A]</mark> and <mark>[option B]</mark>. What matters most to me: <mark>[e.g. money, time with family, stability]</mark>. Lay out the pros, cons, and hidden costs of each, then tell me what would have to be true for each option to be the right call. Ask me anything you need to know. Don&#x27;t pick for me — help me see it clearly.</div>
+  <div class="ptxt">I&#x27;m deciding between <mark>[option A]</mark> and <mark>[option B]</mark>. What matters most to me: <mark>[e.g. money, time with family, stability]</mark>. Lay out the pros, cons, and hidden costs of each, then tell me what would have to be true for each option to be the right call. Ask me anything you need to know. Don&#x27;t pick for me — help me see it clearly.</div>
   <textarea class="raw" id="r9" aria-hidden="true" tabindex="-1">I&#x27;m deciding between [option A] and [option B]. What matters most to me: [e.g. money, time with family, stability]. Lay out the pros, cons, and hidden costs of each, then tell me what would have to be true for each option to be the right call. Ask me anything you need to know. Don&#x27;t pick for me — help me see it clearly.</textarea>
-  <button class="copy" data-n="9" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="9" type="button">Copy prompt</button>
 </article>
 <article class="p" id="p10">
   <div class="ph"><span class="num">10</span><div><h2>The Honest Critic</h2><span class="tag">Any task</span></div></div>
   <p class="why">AI is polite by default. This makes it tell you what&#x27;s actually wrong — then fix it.</p>
-  <div class="txt" id="t10">Here&#x27;s something I wrote: <mark>[paste — resume, post, email, essay]</mark>. Its goal is <mark>[what it needs to do]</mark>. Be a tough but fair editor: list the 3 biggest problems in order of importance, explain why each one hurts, then give me a revised version that fixes them. Don&#x27;t soften the feedback.</div>
+  <div class="ptxt">Here&#x27;s something I wrote: <mark>[paste — resume, post, email, essay]</mark>. Its goal is <mark>[what it needs to do]</mark>. Be a tough but fair editor: list the 3 biggest problems in order of importance, explain why each one hurts, then give me a revised version that fixes them. Don&#x27;t soften the feedback.</div>
   <textarea class="raw" id="r10" aria-hidden="true" tabindex="-1">Here&#x27;s something I wrote: [paste — resume, post, email, essay]. Its goal is [what it needs to do]. Be a tough but fair editor: list the 3 biggest problems in order of importance, explain why each one hurts, then give me a revised version that fixes them. Don&#x27;t soften the feedback.</textarea>
-  <button class="copy" data-n="10" type="button"><span class="lbl">Copy prompt</span></button>
+  <button class="btn copy" data-n="10" type="button">Copy prompt</button>
 </article>
-
-<div class="tip">
-  <b>Try this once: same prompt, two AIs</b>
-  Copy any prompt above, paste the exact same thing into two different AI tools, and read the answers side by side. You'll see right away which one sounds more like you — and that's the one to use for writing.
-</div>
-
-<footer>
-  From the free AI Starter Kit · <a href="/">anotherrealmgateway.com</a> · <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">@argateway</a>
-</footer>
-</div>
-<script>
-async function copyText(n){
-  const raw=document.getElementById('r'+n);
-  const text=raw.value;
-  try{ await navigator.clipboard.writeText(text); return true; }
-  catch(e){
-    raw.style.position='fixed'; raw.style.left='0'; raw.style.opacity='0';
-    raw.focus(); raw.select(); raw.setSelectionRange(0,text.length);
-    let ok=false; try{ ok=document.execCommand('copy'); }catch(_){}
-    raw.style.position='absolute'; raw.style.left='-9999px'; raw.blur();
-    return ok;
-  }
-}
-document.querySelectorAll('.copy').forEach(btn=>{
-  btn.addEventListener('click',async()=>{
-    const ok=await copyText(btn.dataset.n);
-    const lbl=btn.querySelector('.lbl');
-    if(ok){ btn.classList.add('done'); lbl.textContent='Copied — now paste it into your AI'; }
-    else { lbl.textContent='Press and hold the text above to copy'; }
-    setTimeout(()=>{ btn.classList.remove('done'); lbl.textContent='Copy prompt'; },3200);
-  });
-});
-</script>
-</body>
-</html>
+<div class="tipbox"><strong>Try this once: the same prompt in two AIs</strong>Copy any prompt above and paste the exact same text into two different AI tools. Read the answers side by side &mdash; you&rsquo;ll see immediately which one sounds more like you, and that&rsquo;s the one to use for writing.</div>
+</main>
+<footer class="site-foot"><div class="wrap">
+<span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
+<span><a href="/mission">Mission</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp; <a href="mailto:hello@anotherrealmgateway.com">hello@anotherrealmgateway.com</a></span>
+</div></footer><script>
+function copyText(n){var raw=document.getElementById('r'+n),t=raw.value;
+ if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t).then(function(){return true},function(){return fb()})}return Promise.resolve(fb());
+ function fb(){raw.style.position='fixed';raw.style.left='0';raw.focus();raw.select();raw.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}raw.style.position='absolute';raw.style.left='-9999px';raw.blur();return ok}}
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){copyText(b.dataset.n).then(function(ok){
+ b.textContent=ok?'Copied — now paste it into your AI':'Press and hold the text above to copy';if(ok)b.classList.add('done');
+ setTimeout(function(){b.classList.remove('done');b.textContent='Copy prompt'},3200)})})});
+var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();
+</script></body></html>

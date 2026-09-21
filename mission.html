@@ -3,168 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#14213D">
-<title>Mission — Another Realm Gateway</title>
+<meta name="theme-color" content="#F6F3EC">
+<title>The mission — Another Realm Gateway</title>
 <meta name="description" content="Why Another Realm Gateway exists: AI skills belong with everyone, not just the people already working in tech.">
-<meta property="og:title" content="The Gateway Mission">
-<meta property="og:description" content="AI skills belong with everyone, not just the people already working in tech.">
+<meta property="og:title" content="The mission — Another Realm Gateway">
+<meta property="og:description" content="Why Another Realm Gateway exists: AI skills belong with everyone, not just the people already working in tech.">
 <meta property="og:url" content="https://anotherrealmgateway.com/mission">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--ink:#14213D;--coral:#FF6E4A;--sand:#EDE0C8;--white:#FBF7EF;--ink-soft:#4A5573;--line:#DCCDB1;--wrap:1120px}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--white);color:var(--ink);font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:500;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3{font-family:'Bricolage Grotesque','Manrope',sans-serif;letter-spacing:-.02em;line-height:1.05}
-a{color:inherit}
-.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
-.ring{display:inline-block;border-radius:50%;border:3px solid var(--coral);width:22px;height:22px;flex:none}
-header{position:sticky;top:0;z-index:50;background:rgba(251,247,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;gap:14px;height:68px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:12px;text-decoration:none}
-nav .links{margin-left:auto;display:flex;align-items:center;gap:clamp(14px,2.6vw,30px);font-size:14px;font-weight:600}
-nav .links a{text-decoration:none;opacity:.78}
-nav .links a:hover{opacity:1;color:var(--coral)}
-nav .links .btn{opacity:1}
-.btn{display:inline-block;background:var(--coral);color:#fff;text-decoration:none;font-weight:800;font-size:15px;padding:13px 24px;border:0;border-radius:999px;cursor:pointer;font-family:'Manrope',sans-serif;transition:transform .15s ease,box-shadow .15s ease}
-.btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(255,110,74,.35)}
-.btn.sm{padding:9px 18px;font-size:13.5px}
-.btn.ghost{background:transparent;color:var(--white);border:1.5px solid rgba(251,247,239,.5)}
-.btn.ghost:hover{background:var(--white);color:var(--ink);box-shadow:none}
-.hero{background:var(--ink);color:var(--white);position:relative;overflow:hidden}
-.hero .wrap{position:relative;z-index:2;padding:clamp(50px,8vw,92px) clamp(20px,5vw,40px)}
-.hero .ring-art{position:absolute;right:-8vw;top:-10vw;width:38vw;height:38vw;max-width:520px;max-height:520px;border:clamp(18px,3vw,40px) solid var(--coral);border-radius:50%;z-index:1}
-.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:18px}
-.hero h1{font-size:clamp(36px,6vw,66px);font-weight:800;max-width:15ch;margin-bottom:20px}
-.hero h1 em{font-style:normal;color:var(--coral)}
-.hero p{font-size:clamp(17px,2vw,21px);color:var(--sand);max-width:44ch}
-section{padding:clamp(48px,7vw,86px) 0}
-.band{background:var(--sand)}
-.prose{max-width:62ch}
-.prose h2{font-size:clamp(26px,4vw,40px);font-weight:800;margin-bottom:16px}
-.prose h2+p{margin-top:0}
-.prose p{font-size:clamp(16px,1.85vw,18.5px);color:var(--ink-soft);margin-bottom:16px}
-.prose p strong{color:var(--ink)}
-.pull{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(22px,3.4vw,32px);line-height:1.25;color:var(--ink);border-left:4px solid var(--coral);padding-left:clamp(16px,2.4vw,26px);margin:clamp(26px,4vw,40px) 0;max-width:24ch}
-.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px);margin-top:clamp(24px,3vw,36px)}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(20px,2.6vw,28px)}
-.card .n{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:28px;color:var(--coral);line-height:1;margin-bottom:10px}
-.card h3{font-size:18.5px;margin-bottom:8px}
-.card p{font-size:15px;color:var(--ink-soft)}
-.steps{display:grid;gap:12px;margin-top:clamp(22px,3vw,32px)}
-.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:clamp(16px,2.2vw,22px) clamp(18px,2.4vw,26px);display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:baseline}
-.step .when{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:15px;color:var(--coral);min-width:88px}
-.step p{font-size:15.5px;color:var(--ink-soft);margin:0}
-.step b{color:var(--ink)}
-.cta-band{background:var(--ink);color:var(--white);text-align:center}
-.cta-band h2{font-size:clamp(27px,4.4vw,44px);font-weight:800;margin-bottom:16px}
-.cta-band p{color:var(--sand);font-size:clamp(16px,1.9vw,19px);max-width:46ch;margin:0 auto 26px}
-footer{border-top:1px solid var(--line);padding:30px 0 42px;font-size:13px;color:var(--ink-soft)}
-.foot-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
-.foot-row a{text-decoration:none}
-.foot-row a:hover{color:var(--coral)}
-@media(max-width:860px){.cols3{grid-template-columns:1fr}.step{grid-template-columns:1fr;gap:6px}nav .links a.nav-hide{display:none}.hero .ring-art{opacity:.5;right:-30vw}}
-</style>
+
 </head>
-<body>
+<body><header class="site-head"><div class="wrap">
+<a class="wordmark" href="/">Another Realm <em>Gateway</em></a>
+<nav class="nav" aria-label="Main">
+<a class="hide-m" href="/#kit">The Kit</a>
+<a class="hide-m" href="/#programs">Programs</a>
+<a class="hide-m" href="/mission">Mission</a>
+<a class="btn sm" href="/#kit"><span class="long">Get the free kit</span><span class="short">Free kit</span></a>
+</nav></div></header>
+<main>
+<section style="padding-bottom:0"><div class="wrap"><div class="prose">
+  <span class="label">The mission</span>
+  <h1 style="margin-top:20px">The people with the most to gain are being taught the <em class="i">least.</em></h1>
+  <div class="rule"></div>
+  <p class="lede">Gateway exists to close that gap &mdash; starting with anyone willing to spend ten minutes learning to ask better.</p>
+</div></div></section>
 
-<header>
-  <div class="wrap">
-    <nav>
-      <a class="brand" href="/"><span class="ring"></span> Another Realm Gateway</a>
-      <div class="links">
-        <a class="nav-hide" href="/#products">What's coming</a>
-        <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a>
-        <a class="btn sm" href="/#kit">Get the free kit</a>
-      </div>
-    </nav>
+<section><div class="wrap"><div class="prose">
+  <h2>The gap</h2>
+  <p>AI is the biggest change to how ordinary work gets done in a generation. The people best placed to use it already work in tech &mdash; they have the vocabulary, the confidence and the colleagues to ask.</p>
+  <p>Everyone else gets told to &ldquo;just try it.&rdquo; They type a question, get a generic answer, quietly decide it isn&rsquo;t for them, and go back to doing the work the long way. <strong>That isn&rsquo;t a talent gap. It&rsquo;s a teaching gap.</strong></p>
+  <p>Meanwhile the same tools are reshaping who gets hired, who gets promoted and whose job survives the next five years. A gap in good teaching becomes a gap in income.</p>
+  <div class="pull">Nobody should lose out on this because the instructions were written for somebody else.</div>
+</div></div></section>
+
+<section class="band"><div class="wrap">
+  <div class="sec-head"><span class="label">Three rules</span><h2>What we actually do about it.</h2>
+  <p class="lede">Not a manifesto &mdash; three rules that decide what gets published here.</p></div>
+  <div class="cols3">
+    <div><div class="n">I.</div><h3>The foundation stays free</h3><p>The Starter Kit, the daily content, the prompts and the tool guides. Not a trial, not a teaser with the good part removed.</p></div>
+    <div><div class="n">II.</div><h3>Plain English, always</h3><p>If something needs jargon to sound impressive, it gets rewritten. Anyone who can use a phone can use what&rsquo;s taught here.</p></div>
+    <div><div class="n">III.</div><h3>Teach the skill, not the dependency</h3><p>Even the paid programs end with you able to build the thing yourself. The goal is that you stop needing us.</p></div>
   </div>
-</header>
+</div></section>
 
-<section class="hero">
-  <div class="ring-art"></div>
-  <div class="wrap">
-    <p class="eyebrow">The mission</p>
-    <h1>The people with the most to gain are being taught the <em>least</em>.</h1>
-    <p>Gateway exists to close that gap — starting with anyone willing to spend ten minutes learning to ask better.</p>
+<section><div class="wrap"><div class="prose">
+  <h2>No gatekeeping, in practice</h2>
+  <p>It&rsquo;s easy to say. Here&rsquo;s what it costs us to mean it.</p>
+  <p><strong>Full prompts, every time.</strong> No &ldquo;message me for the full version.&rdquo; If a technique is taught here, it&rsquo;s taught completely.</p>
+  <p><strong>Honest tool comparisons.</strong> Including when the free plan beats the paid one, and when the answer is &ldquo;you don&rsquo;t need to pay for anything yet.&rdquo; There are no affiliate deals with any AI company, so nothing pulls the recommendations.</p>
+  <p><strong>Uncertainty gets labelled.</strong> Pricing changes monthly, platform rules change without warning, and models gain abilities they didn&rsquo;t have last quarter. When something is unverified, it says so.</p>
+</div></div></section>
+
+<section class="band"><div class="wrap">
+  <div class="sec-head"><span class="label">Where this goes</span><h2>A specific direction.</h2>
+  <p class="lede">Right now Gateway is one person, a daily publishing habit and a free kit. Here&rsquo;s where it&rsquo;s pointed.</p></div>
+  <div class="ladder">
+    <div class="rung"><div class="price" style="font-size:28px">Now</div><div><h3>Teach the basics in public, daily</h3><p>Build the free library until there&rsquo;s a real answer for whatever someone is stuck on.</p></div><span></span></div>
+    <div class="rung"><div class="price" style="font-size:28px">Next</div><div><h3>Go deep on the moments that change income</h3><p>Getting hired first &mdash; then side income, everyday work, career changes and students.</p></div><span></span></div>
+    <div class="rung"><div class="price" style="font-size:28px">In time</div><div><h3>Reach the people who never see this at all</h3><p>Workforce programs, community organisations, adult learners and people retraining after a career ends. It&rsquo;s the long-term aim &mdash; and why the free tier isn&rsquo;t a marketing tactic.</p></div><span></span></div>
   </div>
-</section>
+</div></section>
 
-<section>
-  <div class="wrap"><div class="prose">
-    <h2>The gap</h2>
-    <p>AI is the biggest change to how ordinary work gets done in a generation. The people best positioned to use it are the ones who already work in tech — they have the vocabulary, the confidence and the coworkers to ask.</p>
-    <p>Everyone else gets told to "just try it." They type a question, get a generic answer back, quietly conclude it isn't for them, and go back to doing the work the long way. <strong>That's not a talent gap. It's a teaching gap.</strong></p>
-    <p>Meanwhile the same tools are quietly reshaping who gets hired, who gets promoted and whose job survives the next five years. A gap in access to good teaching turns into a gap in income.</p>
-    <div class="pull">Nobody should lose out on this because the instructions were written for somebody else.</div>
-  </div></div>
-</section>
+<section style="padding-top:clamp(40px,6vw,64px)"><div class="wrap"><div class="prose">
+  <p style="font-family:var(--serif);font-size:24px;color:var(--ink);border-top:1px solid var(--rule);padding-top:28px;margin:0">&mdash; Andrew</p>
+  <p class="small" style="margin-top:4px">Columbus, Ohio &middot; Founder, Another Realm Gateway</p>
+</div></div></section>
 
-<section class="band">
-  <div class="wrap">
-    <div class="prose">
-      <h2>What we're actually doing about it</h2>
-      <p>Not a manifesto — three rules that decide what gets published here.</p>
-    </div>
-    <div class="cols3">
-      <div class="card"><div class="n">01</div><h3>The foundation stays free</h3><p>The Starter Kit, the daily content, the prompts, the tool guides. Not a trial, not a teaser with the good part removed. Free, and it stays that way.</p></div>
-      <div class="card"><div class="n">02</div><h3>Plain English, always</h3><p>If something needs jargon to sound impressive, it gets rewritten. Anyone who can use a phone can use what's taught here.</p></div>
-      <div class="card"><div class="n">03</div><h3>Teach the skill, not the dependency</h3><p>Even the paid products end with you able to build the thing yourself. The goal is that you stop needing us.</p></div>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="wrap"><div class="prose">
-    <h2>No gatekeeping, in practice</h2>
-    <p>It's easy to say. Here's what it costs us to mean it:</p>
-    <p><strong>Full prompts, every time.</strong> No "DM me for the full version." If a technique gets taught here, it gets taught completely.</p>
-    <p><strong>Honest tool comparisons.</strong> Including when the free plan beats the paid one, and when the answer is "you don't need to pay for anything yet." There are no affiliate deals with any AI company, so there's nothing pulling the recommendations.</p>
-    <p><strong>Uncertainty gets labeled.</strong> Pricing changes monthly, platform rules change without warning, and models get capabilities they didn't have last quarter. When something is unverified, it says so rather than being dressed up as fact.</p>
-  </div></div>
-</section>
-
-<section class="band">
-  <div class="wrap">
-    <div class="prose">
-      <h2>Where this goes</h2>
-      <p>Right now Gateway is one person, a daily posting habit and a free kit. The direction it's pointed, though, is specific:</p>
-    </div>
-    <div class="steps">
-      <div class="step"><span class="when">Now</span><p><b>Teach the basics in public, daily.</b> Build the free library out until there's a real answer for whatever someone is stuck on.</p></div>
-      <div class="step"><span class="when">Next</span><p><b>Go deep on the moments that change someone's income</b> — getting hired first, then side income, everyday work, career switchers and students.</p></div>
-      <div class="step"><span class="when">Eventually</span><p><b>Get this to the people who never see it at all:</b> workforce programs, community organizations, adult learners, people retraining after a career ends. That's the long-term aim, and it's the reason the free tier isn't a marketing tactic.</p></div>
-    </div>
-  </div>
-</section>
-
-<section style="padding-top:0">
-  <div class="wrap"><div class="prose">
-    <p style="font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:clamp(18px,2.4vw,22px);color:var(--ink);border-top:1px solid var(--line);padding-top:26px;margin:0">— Andrew<br><span style="font-family:'Manrope',sans-serif;font-weight:500;font-size:15px;color:var(--ink-soft)">Columbus, Ohio · founder, Another Realm Gateway</span></p>
-  </div></div>
-</section>
-
-<section class="cta-band">
-  <div class="wrap">
-    <h2>Start with the free kit</h2>
-    <p>Ten prompts, a tool guide and a cheat sheet. Ten minutes to go from search-engine habits to something that actually saves you time.</p>
-    <a class="btn" href="/#kit">Get the AI Starter Kit</a>
-    <p style="margin-top:22px"><a class="btn ghost" href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">Follow @argateway</a></p>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap foot-row">
-    <span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
-    <span><a href="/">Home</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp; <a href="mailto:hello@anotherrealmgateway.com">hello@anotherrealmgateway.com</a></span>
-  </div>
-</footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
-</body>
-</html>
+<section class="dark" style="text-align:center"><div class="wrap">
+  <h2 style="margin-bottom:16px">Start with the free kit.</h2>
+  <p class="lede" style="color:#D9D3C7;margin:0 auto 30px;max-width:46ch">Ten prompts, a tool guide and a cheat sheet. Ten minutes from search-engine habits to something that saves you time.</p>
+  <a class="btn" style="background:var(--bg);color:var(--ink);border-color:var(--bg)" href="/#kit">Get the AI Starter Kit</a>
+</div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
+<span><a href="/mission">Mission</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp; <a href="mailto:hello@anotherrealmgateway.com">hello@anotherrealmgateway.com</a></span>
+</div></footer><script>var y=document.getElementById("yr");if(y)y.textContent=new Date().getFullYear();</script></body></html>

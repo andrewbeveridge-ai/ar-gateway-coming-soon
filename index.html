@@ -3,330 +3,116 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<meta name="theme-color" content="#14213D">
-<title>Another Realm Gateway — AI for everyday people</title>
-<meta name="description" content="AI for everyday people. Basics to advanced. No gatekeeping. Get the free AI Starter Kit: 10 prompts, a tool guide and a cheat sheet that turn AI into an actual assistant.">
-<meta property="og:title" content="Another Realm Gateway — AI for everyday people">
-<meta property="og:description" content="Stop using AI like a search engine. Free AI Starter Kit: 10 prompts, a tool guide and a one-page cheat sheet.">
+<meta name="theme-color" content="#F6F3EC">
+<title>Another Realm Gateway — AI, taught properly</title>
+<meta name="description" content="Stop using AI like a search engine. Plain-English AI skills for everyday people, basics to advanced. Get the free AI Starter Kit.">
+<meta property="og:title" content="Another Realm Gateway — AI, taught properly">
+<meta property="og:description" content="Stop using AI like a search engine. Plain-English AI skills for everyday people, basics to advanced. Get the free AI Starter Kit.">
 <meta property="og:url" content="https://anotherrealmgateway.com">
 <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary_large_image">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;800&display=swap" rel="stylesheet">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
 <link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
 <link rel="shortcut icon" href="/favicon.ico">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --ink:#14213D; --coral:#FF6E4A; --sand:#EDE0C8; --white:#FBF7EF;
-  --ink-soft:#4A5573; --line:#DCCDB1; --wrap:1120px;
-}
-html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
-body{background:var(--white);color:var(--ink);font-family:'Manrope',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-weight:500;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-h1,h2,h3,.display{font-family:'Bricolage Grotesque','Manrope',sans-serif;letter-spacing:-.02em;line-height:1.04}
-a{color:inherit}
-.wrap{width:100%;max-width:var(--wrap);margin:0 auto;padding:0 clamp(20px,5vw,40px)}
-.ring{display:inline-block;border-radius:50%;border:3px solid var(--coral);width:22px;height:22px;flex:none}
 
-/* nav */
-header{position:sticky;top:0;z-index:50;background:rgba(251,247,239,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
-nav{display:flex;align-items:center;gap:14px;height:68px}
-.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;font-size:12px;text-decoration:none}
-nav .links{margin-left:auto;display:flex;align-items:center;gap:clamp(14px,2.6vw,30px);font-size:14px;font-weight:600}
-nav .links a{text-decoration:none;opacity:.78}
-nav .links a:hover{opacity:1;color:var(--coral)}
-nav .links .btn{opacity:1}
-.btn{display:inline-block;background:var(--coral);color:#fff;text-decoration:none;font-weight:800;font-size:15px;letter-spacing:.01em;padding:13px 24px;border:0;border-radius:999px;cursor:pointer;font-family:'Manrope',sans-serif;transition:transform .15s ease,box-shadow .15s ease}
-.btn:hover{transform:translateY(-1px);box-shadow:0 8px 22px rgba(255,110,74,.35)}
-.btn.sm{padding:9px 18px;font-size:13.5px}
-.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--ink)}
-.btn.ghost:hover{box-shadow:none;background:var(--ink);color:var(--white)}
-
-/* hero */
-.hero{background:var(--ink);color:var(--white);position:relative;overflow:hidden}
-.hero .wrap{position:relative;z-index:2;padding-top:clamp(56px,9vw,104px);padding-bottom:clamp(56px,9vw,104px);display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(28px,5vw,64px);align-items:center}
-.hero .ring-art{position:absolute;right:-9vw;top:-6vw;width:44vw;height:44vw;max-width:620px;max-height:620px;border:clamp(20px,3.4vw,44px) solid var(--coral);border-radius:50%;opacity:.95;z-index:1}
-.hero .ring-art2{position:absolute;right:26vw;bottom:-7vw;width:16vw;height:16vw;max-width:190px;max-height:190px;border:clamp(8px,1.2vw,15px) solid var(--sand);border-radius:50%;opacity:.35;z-index:1}
-.eyebrow{font-size:12px;font-weight:800;letter-spacing:.18em;text-transform:uppercase;color:var(--coral);margin-bottom:18px}
-.hero h1{font-size:clamp(38px,6.4vw,72px);font-weight:800;margin-bottom:22px}
-.hero h1 em{font-style:normal;color:var(--coral)}
-.hero p.lede{font-size:clamp(16.5px,2vw,20px);color:var(--sand);max-width:30ch;margin-bottom:30px}
-.hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
-.hero .btn.ghost{color:var(--white);border-color:rgba(251,247,239,.5)}
-.hero .btn.ghost:hover{background:var(--white);color:var(--ink);border-color:var(--white)}
-
-/* kit card */
-.kitcard{background:var(--white);color:var(--ink);border-radius:20px;padding:clamp(22px,3vw,32px);box-shadow:0 24px 60px rgba(0,0,0,.28)}
-.kitcard h2{font-size:23px;margin-bottom:6px}
-.kitcard .free{display:inline-block;background:var(--ink);color:var(--white);font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;padding:5px 11px;border-radius:999px;margin-bottom:14px}
-.kitcard ul{list-style:none;margin:14px 0 18px;font-size:14.5px}
-.kitcard li{padding:7px 0 7px 26px;position:relative;border-bottom:1px solid var(--line)}
-.kitcard li:last-child{border:0}
-.kitcard li::before{content:"";position:absolute;left:2px;top:13px;width:11px;height:11px;border:2.5px solid var(--coral);border-radius:50%}
-form{display:flex;flex-direction:column;gap:10px}
-input[type=email]{width:100%;min-height:50px;padding:13px 16px;border:1.5px solid var(--line);border-radius:10px;background:#fff;font-family:'Manrope',sans-serif;font-size:16px;color:var(--ink)}
-input[type=email]:focus{outline:none;border-color:var(--coral);box-shadow:0 0 0 3px rgba(255,110,74,.18)}
-.hp{position:absolute;left:-9999px;opacity:0;height:0;width:0}
-.msg{display:none;font-size:14.5px;padding:12px 14px;border-radius:10px;line-height:1.5}
-.msg.ok{background:#E8F3EC;color:#1B5E33;border:1px solid #BEDCC8}
-.msg.err{background:#FDECE7;color:#A03418;border:1px solid #F5C6B7}
-.fine{font-size:12.5px;color:var(--ink-soft)}
-
-
-/* demo */
-.demo{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(14px,2.4vw,22px);align-items:stretch}
-.dbox{border-radius:16px;padding:clamp(20px,2.6vw,28px);display:flex;flex-direction:column}
-.dbox .tag{font-size:10.5px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px}
-.dbox.before{background:#fff;border:1px solid var(--line)}
-.dbox.before .tag{color:var(--ink-soft)}
-.dbox.before .txt{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14.5px;color:var(--ink-soft);background:var(--white);border:1px dashed var(--line);border-radius:10px;padding:14px 16px}
-.dbox.after{background:var(--ink);color:var(--white)}
-.dbox.after .tag{color:var(--coral)}
-.dbox.after .txt{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:14px;line-height:1.6;background:rgba(251,247,239,.07);border-radius:10px;padding:14px 16px;color:var(--white)}
-.dbox.after .txt b{color:var(--coral);font-weight:700}
-.dbox .out{font-size:14.5px;margin-top:14px}
-.dbox.before .out{color:var(--ink-soft)}
-.dbox.after .out{color:var(--sand)}
-.dbox .out strong{color:inherit;font-weight:800}
-.dbox.after .out strong{color:var(--white)}
-@media(max-width:860px){.demo{grid-template-columns:1fr}}
-
-/* sections */
-section{padding:clamp(52px,8vw,96px) 0}
-.sec-head{max-width:34ch;margin-bottom:clamp(26px,4vw,44px)}
-.sec-head h2{font-size:clamp(28px,4.4vw,46px);font-weight:800;margin-bottom:14px}
-.sec-head p{font-size:clamp(15.5px,1.8vw,18px);color:var(--ink-soft)}
-.cols3{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2.4vw,26px)}
-.card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(20px,2.6vw,28px)}
-.card .n{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:30px;color:var(--coral);line-height:1;margin-bottom:10px}
-.card h3{font-size:19px;margin-bottom:8px}
-.card p{font-size:15px;color:var(--ink-soft)}
-.band{background:var(--sand)}
-
-/* ladder */
-.ladder{display:grid;gap:14px}
-.rung{background:#fff;border:1px solid var(--line);border-radius:16px;padding:clamp(20px,2.6vw,28px);display:grid;grid-template-columns:132px 1fr auto;gap:clamp(16px,2.6vw,28px);align-items:center}
-.rung .price{font-family:'Bricolage Grotesque',sans-serif;font-weight:800;font-size:34px;color:var(--coral);line-height:1}
-.rung .price small{display:block;font-family:'Manrope',sans-serif;font-size:10.5px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);margin-top:7px}
-.rung h3{font-size:21px;margin-bottom:7px}
-.rung p{font-size:15px;color:var(--ink-soft);max-width:60ch}
-.rung.live{background:var(--ink);border-color:var(--ink)}
-.rung.live h3{color:var(--white)}
-.rung.live p{color:var(--sand)}
-.rung.live .price small{color:var(--sand)}
-.soon{font-size:11px;font-weight:800;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-soft);border:1.5px solid var(--line);border-radius:999px;padding:8px 15px;white-space:nowrap}
-
-/* about + footer */
-.about{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,5vw,60px);align-items:start}
-.about p{font-size:clamp(15.5px,1.8vw,17.5px);color:var(--ink-soft);margin-bottom:14px}
-.about p strong{color:var(--ink)}
-.cta-band{background:var(--ink);color:var(--white);text-align:center}
-.cta-band h2{font-size:clamp(28px,4.6vw,48px);font-weight:800;margin-bottom:16px}
-.cta-band p{color:var(--sand);font-size:clamp(16px,1.9vw,19px);max-width:46ch;margin:0 auto 26px}
-footer{border-top:1px solid var(--line);padding:30px 0 42px;font-size:13px;color:var(--ink-soft)}
-.foot-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between}
-.foot-row a{text-decoration:none}
-.foot-row a:hover{color:var(--coral)}
-
-@media(max-width:860px){
-  .hero .wrap{grid-template-columns:1fr;padding-top:44px;padding-bottom:48px}
-  .hero .ring-art{width:70vw;height:70vw;right:-26vw;top:auto;bottom:-24vw;opacity:.5}
-  .hero .ring-art2{display:none}
-  .hero p.lede{max-width:none}
-  .cols3{grid-template-columns:1fr}
-  .rung{grid-template-columns:1fr;gap:12px}
-  .rung .soon,.rung .btn{justify-self:start}
-  .about{grid-template-columns:1fr}
-  nav .links a.nav-hide{display:none}
-}
-</style>
 </head>
-<body>
-
-<header>
-  <div class="wrap">
-    <nav>
-      <a class="brand" href="/"><span class="ring"></span> Another Realm Gateway</a>
-      <div class="links">
-        <a class="nav-hide" href="#kit">The Kit</a>
-        <a class="nav-hide" href="#products">What's coming</a>
-        <a class="nav-hide" href="/mission">Mission</a>
-        <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a>
-        <a class="btn sm" href="#kit">Get the free kit</a>
-      </div>
-    </nav>
-  </div>
-</header>
-
-<section class="hero">
-  <div class="ring-art"></div>
-  
-  <div class="wrap">
-    <div>
-      <p class="eyebrow">AI for everyday people</p>
-      <h1>Stop using AI like a <em>search engine</em>.</h1>
-      <p class="lede">It isn't a smarter Google. It's a sharp coworker who knows nothing about you yet — and briefing it properly takes about ninety seconds.</p>
-      <div class="cta-row">
-        <a class="btn" href="#kit">Get the free Starter Kit</a>
-        <a class="btn ghost" href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">Follow @argateway</a>
-      </div>
-    </div>
-
-    <div class="kitcard" id="kit">
-      <span class="free">Free — no catch</span>
-      <h2>The AI Starter Kit</h2>
-      <p class="fine">A 9-page PDF you'll actually use.</p>
-      <ul>
-        <li>The 4-part formula that fixes generic answers</li>
-        <li>10 copy-paste prompts for work, job hunting and life</li>
-        <li>Which AI to use — and what each really costs</li>
-        <li>A one-page cheat sheet to print and keep</li>
-      </ul>
-      <form id="kitForm" novalidate>
-        <input type="email" id="email" placeholder="you@email.com" autocomplete="email" inputmode="email" required aria-label="Your email address">
-        <input type="text" class="hp" id="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-        <button class="btn" type="submit" id="kitBtn">Send me the kit</button>
-      </form>
-      <div class="msg ok" id="okMsg"></div>
-      <div class="msg err" id="errMsg"></div>
-      <p class="fine" style="margin-top:10px">Instant download. After that, a few short emails with techniques you can use the same day. One click to unsubscribe.</p>
+<body><header class="site-head"><div class="wrap">
+<a class="wordmark" href="/">Another Realm <em>Gateway</em></a>
+<nav class="nav" aria-label="Main">
+<a class="hide-m" href="#kit">The Kit</a>
+<a class="hide-m" href="#programs">Programs</a>
+<a class="hide-m" href="/mission">Mission</a>
+<a class="btn sm" href="#kit"><span class="long">Get the free kit</span><span class="short">Free kit</span></a>
+</nav></div></header>
+<main>
+<section class="hero" style="padding:0"><div class="wrap">
+  <div>
+    <span class="label">AI for everyday people</span>
+    <h1>Stop using AI like a <em class="i">search engine.</em></h1>
+    <div class="rule"></div>
+    <p class="lede">It isn&rsquo;t a smarter Google. It&rsquo;s a capable colleague who knows nothing about you yet &mdash; and briefing it properly takes about ninety seconds.</p>
+    <div class="cta-row">
+      <a class="btn" href="#kit">Get the free Starter Kit</a>
+      <a class="btn line" href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">Follow @argateway</a>
     </div>
   </div>
-</section>
+  <div class="card" id="kit">
+<span class="label">Free</span>
+<div class="card-title">The AI Starter Kit</div>
+<p class="small">A short, practical guide &mdash; built to be used, not skimmed.</p>
+<ul class="list"><li><span class="n">1</span>The four-part formula that fixes generic answers</li><li><span class="n">2</span>Ten copy-and-paste prompts for work, job hunting and life</li><li><span class="n">3</span>Which AI to use, and what each one really costs</li><li><span class="n">4</span>A one-page cheat sheet to print and keep</li></ul>
+<form data-lead data-source="web:home" novalidate>
+<label for="email-web:home" class="small" style="position:absolute;left:-9999px">Email address</label>
+<input type="email" id="email-web:home" placeholder="Your email address" autocomplete="email" inputmode="email" required>
+<input type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn" type="submit">Send me the kit</button>
+</form>
+<div class="msg ok" role="status"></div>
+<div class="msg err" role="alert"></div>
+<p class="small" style="margin-top:14px">Instant download. After that, a few short emails with techniques you can use the same day. One click to unsubscribe.</p>
+</div>
+</div></section>
 
-<section>
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Most people never get past question one</h2>
-      <p>They type a short question, get a generic answer, and quietly decide AI is overrated. Three things change that — and none of them require being technical.</p>
-    </div>
-    <div class="cols3">
-      <div class="card"><div class="n">01</div><h3>Brief it like a person</h3><p>Role, context, task, format. The same briefing you'd give a sharp new coworker who knows nothing about you yet.</p></div>
-      <div class="card"><div class="n">02</div><h3>Treat answer one as a draft</h3><p>The real quality shows up in the second and third message. "Shorter." "More specific." "Sound more like me."</p></div>
-      <div class="card"><div class="n">03</div><h3>Let it ask you</h3><p>Five questions back from the AI will beat an hour of you trying to describe the situation perfectly up front.</p></div>
-    </div>
+<section class="band"><div class="wrap">
+  <div class="sec-head"><span class="label">The problem</span><h2>Most people never get past question one.</h2>
+  <p class="lede">They type a short question, get a generic answer, and quietly decide AI is overrated. Three habits change that &mdash; none of them technical.</p></div>
+  <div class="cols3">
+    <div><div class="n">I.</div><h3>Brief it like a person</h3><p>Role, context, task, format. The briefing you&rsquo;d give a sharp new colleague on their first day.</p></div>
+    <div><div class="n">II.</div><h3>Treat the first answer as a draft</h3><p>The quality arrives in the second and third message. &ldquo;Shorter.&rdquo; &ldquo;More specific.&rdquo; &ldquo;Sound more like me.&rdquo;</p></div>
+    <div><div class="n">III.</div><h3>Let it ask you</h3><p>Five questions from the AI will beat an hour of you trying to describe everything perfectly up front.</p></div>
   </div>
-</section>
+</div></section>
 
-<section class="band">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Here's the whole trick, free, right now</h2>
-      <p>Same request, same AI, ninety seconds apart. The only thing that changed is how it was asked.</p>
-    </div>
-    <div class="demo">
-      <div class="dbox before">
-        <span class="tag">What most people type</span>
-        <div class="txt">write a follow up email after my interview</div>
-        <p class="out"><strong>What comes back:</strong> a stiff template with "I am writing to express my continued interest," three sentences of nothing, and no reason for anyone to reply.</p>
-      </div>
-      <div class="dbox after">
-        <span class="tag">What the formula gets you</span>
-        <div class="txt"><b>Act as</b> a hiring manager who reads 40 of these a week. <b>Context:</b> I interviewed Tuesday for an office coordinator role at a dental practice. The office manager mentioned they're drowning in scheduling errors since two people left, and I told her about the intake system I rebuilt at my last job. <b>Task:</b> write a short follow-up that reminds her of that specific conversation and makes her picture me solving it. <b>Format:</b> under 120 words, warm and direct, no clichés, no "I am writing to express."</div>
-        <p class="out"><strong>What comes back:</strong> an email about her scheduling problem and your fix for it — the kind a hiring manager actually answers.</p>
-      </div>
-    </div>
-    <p class="fine" style="margin-top:18px">Role, context, task, format. That's the formula — and it works on everything, not just job hunting. The kit has ten prompts already built this way.</p>
+<section><div class="wrap">
+  <div class="sec-head"><span class="label">See the difference</span><h2>The whole technique, free, right here.</h2>
+  <p class="lede">Same request, same AI, ninety seconds apart. The only thing that changed is how it was asked.</p></div>
+  <div class="demo">
+    <div class="dbox before"><span class="label">What most people type</span>
+      <div class="txt">write a follow up email after my interview</div>
+      <p class="out"><strong>What comes back:</strong> a stiff template that opens with &ldquo;I am writing to express my continued interest,&rdquo; says nothing, and gives no one a reason to reply.</p></div>
+    <div class="dbox after"><span class="label">What the formula gets you</span>
+      <div class="txt"><b>Act as</b> a hiring manager who reads 40 of these a week. <b>Context:</b> I interviewed Tuesday for an office coordinator role at a dental practice. The office manager said they&rsquo;re drowning in scheduling errors since two people left, and I told her about the intake system I rebuilt at my last job. <b>Task:</b> write a short follow-up that reminds her of that conversation and makes her picture me solving it. <b>Format:</b> under 120 words, warm and direct, no clich&eacute;s.</div>
+      <p class="out"><strong>What comes back:</strong> an email about her scheduling problem and your fix for it &mdash; the kind a hiring manager actually answers.</p></div>
   </div>
-</section>
+  <p class="small" style="margin-top:22px">Role, context, task, format. It works on everything, not just job hunting &mdash; and the kit has ten prompts already built this way.</p>
+</div></section>
 
-<section id="products">
-  <div class="wrap">
-    <div class="sec-head">
-      <h2>Start free. Go deeper when you want to.</h2>
-      <p>The free kit is the whole foundation — it isn't a teaser. What's below is for people who want the full system for one specific job.</p>
-    </div>
-    <div class="ladder">
-      <div class="rung live">
-        <div class="price" style="color:var(--coral)">Free<small>Available now</small></div>
-        <div><h3>AI Starter Kit</h3><p>The formula, 10 prompts, the tool comparison and the cheat sheet — plus a short email series with one new technique at a time.</p></div>
-        <a class="btn" href="#kit">Get it</a>
-      </div>
-      <div class="rung">
-        <div class="price">$27<small>30-day playbook</small></div>
-        <div><h3>How to Get Hired Using AI (Without Getting Rejected)</h3><p>A day-by-day plan: resume, LinkedIn, applications, networking and interview prep — with the prompts for each step, and how to use AI without your application sounding like AI wrote it.</p></div>
-        <span class="soon">In development</span>
-      </div>
-      <div class="rung">
-        <div class="price">$147<small>Coach + Blueprint</small></div>
-        <div><h3>Gateway Interview Coach + Blueprint</h3><p>A personalized AI interview coach for your target role — plus the walkthrough for building it yourself, so you keep the skill and not just the tool.</p></div>
-        <span class="soon">In development</span>
-      </div>
-    </div>
-    <p class="fine" style="margin-top:18px">Nothing above is for sale yet. Get the free kit and you'll be first to know when each one lands.</p>
+<section class="band" id="programs"><div class="wrap">
+  <div class="sec-head"><span class="label">Programs</span><h2>Start free. Go deeper when you&rsquo;re ready.</h2>
+  <p class="lede">The Starter Kit is the full foundation, not a teaser. The programs below are for people who want a complete system for one specific goal.</p></div>
+  <div class="ladder">
+    <div class="rung"><div class="price">Free<small>Available now</small></div>
+      <div><h3>The AI Starter Kit</h3><p>The formula, ten prompts, the tool comparison and the cheat sheet &mdash; plus short emails with one new technique at a time.</p></div>
+      <a class="btn" href="#kit">Get it</a></div>
+    <div class="rung"><div class="price">$27<small>30-day playbook</small></div>
+      <div><h3>How to Get Hired Using AI (Without Getting Rejected)</h3><p>A day-by-day plan for your resume, LinkedIn, applications, networking and interview prep &mdash; with the prompts for every step, and how to use AI without your application sounding like AI wrote it.</p></div>
+      <span class="status">In development</span></div>
+    <div class="rung"><div class="price">$147<small>Coach + Blueprint</small></div>
+      <div><h3>Gateway Interview Coach + Blueprint</h3><p>A personalised AI interview coach for your target role, plus the walkthrough to build it yourself &mdash; so you keep the skill, not just the tool.</p></div>
+      <span class="status">In development</span></div>
   </div>
-</section>
+  <p class="small" style="margin-top:20px">Nothing above is for sale yet. Get the free kit and you&rsquo;ll be the first to know when each one opens.</p>
+</div></section>
 
-<section>
-  <div class="wrap about">
-    <div>
-      <div class="sec-head" style="margin-bottom:18px"><h2>Why this exists</h2></div>
-      <p>AI is the biggest shift in how ordinary work gets done in a generation, and the people who could gain the most from it are the ones being taught the least. Most of what's out there is written for people who already work in tech.</p>
-      <p>Gateway is the opposite of that: plain English, nothing held back, priced so that the foundation is free and stays free.</p>
-      <p style="margin-top:22px"><a class="btn ghost" href="/mission">Read the mission</a></p>
-    </div>
-    <div>
-      <div class="sec-head" style="margin-bottom:18px"><h2>What "no gatekeeping" means</h2></div>
-      <p>The prompts get shown in full. The tools get compared honestly, including the free ones that beat the paid ones. No affiliate deals with any AI company.</p>
-      <p>Where something is genuinely uncertain — pricing, platform rules, what a model can really do — it gets flagged as uncertain instead of being dressed up as fact.</p>
-    </div>
-  </div>
-</section>
+<section><div class="wrap two">
+  <div><span class="label">Why this exists</span><h2 style="margin-top:14px">The people with the most to gain are taught the least.</h2>
+    <p>Most AI education is written for people who already work in tech. Gateway is the opposite: plain English, nothing held back, and a foundation that is free and stays free.</p>
+    <p style="margin-top:24px"><a class="btn line" href="/mission">Read the mission</a></p></div>
+  <div><span class="label">No gatekeeping</span><h2 style="margin-top:14px">What that means in practice.</h2>
+    <p>Prompts are shown in full. Tools are compared honestly &mdash; including the free ones that beat the paid ones. No affiliate deals with any AI company.</p>
+    <p>Where something is genuinely uncertain &mdash; pricing, platform rules, what a model can really do &mdash; it&rsquo;s labelled as uncertain rather than dressed up as fact.</p></div>
+</div></section>
 
-<section class="cta-band">
-  <div class="wrap">
-    <h2>One prompt a day, in your feed</h2>
-    <p>Prompt reveals, tutorials, honest tool comparisons and myth-busters — every day on TikTok.</p>
-    <a class="btn" href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">Follow @argateway</a>
-  </div>
-</section>
-
-<footer>
-  <div class="wrap foot-row">
-    <span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
-    <span><a href="/mission">Mission</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp; <a href="mailto:hello@anotherrealmgateway.com">hello@anotherrealmgateway.com</a></span>
-  </div>
-</footer>
-
-<script>
-document.getElementById('yr').textContent = new Date().getFullYear();
-const CAPTURE = 'https://bgswqjgswlvdazseyhvu.supabase.co/functions/v1/capture-lead';
-const KIT_URL = '/gateway-ai-starter-kit.pdf';
-const form = document.getElementById('kitForm');
-const ok = document.getElementById('okMsg');
-const err = document.getElementById('errMsg');
-const btn = document.getElementById('kitBtn');
-
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const email = document.getElementById('email').value.trim();
-  const hp = document.getElementById('hp').value;
-  ok.style.display = 'none'; err.style.display = 'none';
-  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-    err.textContent = 'That email looks off — mind checking it?';
-    err.style.display = 'block';
-    return;
-  }
-  btn.disabled = true; btn.textContent = 'Sending…';
-  try {
-    const r = await fetch(CAPTURE, {
-      method: 'POST',
-      headers: {'Content-Type':'application/json'},
-      body: JSON.stringify({entity:'ARAI', dba:'Another Realm Gateway', source:'web:home', email:email, _hp:hp})
-    });
-    if (!r.ok) throw new Error('bad status ' + r.status);
-    form.style.display = 'none';
-    ok.innerHTML = 'You\'re in. <a href="' + KIT_URL + '" style="font-weight:800;color:#1B5E33">Download the kit now →</a><br>Save it somewhere you'll find it — this is the one you'll keep coming back to.';
-    ok.style.display = 'block';
-  } catch (ex) {
-    err.innerHTML = 'Something broke on our end. Grab the kit directly: <a href="' + KIT_URL + '" style="font-weight:800;color:#A03418">download here →</a>';
-    err.style.display = 'block';
-    btn.disabled = false; btn.textContent = 'Send me the kit';
-  }
-});
-</script>
-</body>
-</html>
+<section class="dark" style="text-align:center"><div class="wrap">
+  <h2 style="margin-bottom:16px">One useful idea, every day.</h2>
+  <p class="lede" style="color:#D9D3C7;margin:0 auto 30px;max-width:46ch">Prompt reveals, walkthroughs, honest tool comparisons and myth-busters on TikTok.</p>
+  <a class="btn" style="background:var(--bg);color:var(--ink);border-color:var(--bg)" href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">Follow @argateway</a>
+</div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
+<span><a href="/mission">Mission</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp; <a href="mailto:hello@anotherrealmgateway.com">hello@anotherrealmgateway.com</a></span>
+</div></footer><script src="/assets/lead.js" defer></script></body></html>
