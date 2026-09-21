@@ -142,3 +142,7 @@ input[type=email]:focus{border-color:var(--ink)}
 
 .nav .short{display:none}
 @media (max-width:880px){.nav .short{display:inline}}
+/* signup band (every page) */
+.band{padding:clamp(40px,6vw,64px) 0;border-top:1px solid var(--rule)}
+.bandcard{max-width:720px;margin:0 auto}
+.bandsub{font-size:17px;margin:4px 0 18px}
