@@ -192,7 +192,7 @@ footer{border-top:1px solid var(--line);padding:30px 0 42px;font-size:13px;color
       </form>
       <div class="msg ok" id="okMsg"></div>
       <div class="msg err" id="errMsg"></div>
-      <p class="fine" style="margin-top:10px">One email with the kit, then a short series you can leave any time. No spam, ever.</p>
+      <p class="fine" style="margin-top:10px">Instant download. After that, a few short emails with techniques you can use the same day. One click to unsubscribe.</p>
     </div>
   </div>
 </section>
@@ -319,7 +319,7 @@ form.addEventListener('submit', async (e) => {
     });
     if (!r.ok) throw new Error('bad status ' + r.status);
     form.style.display = 'none';
-    ok.innerHTML = 'You\'re in. <a href="' + KIT_URL + '" style="font-weight:800;color:#1B5E33">Download the kit now →</a><br>A copy is on its way to your inbox too.';
+    ok.innerHTML = 'You\'re in. <a href="' + KIT_URL + '" style="font-weight:800;color:#1B5E33">Download the kit now →</a><br>Save it somewhere you'll find it — this is the one you'll keep coming back to.';
     ok.style.display = 'block';
   } catch (ex) {
     err.innerHTML = 'Something broke on our end. Grab the kit directly: <a href="' + KIT_URL + '" style="font-weight:800;color:#A03418">download here →</a>';
