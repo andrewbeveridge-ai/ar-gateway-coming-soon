@@ -10,7 +10,7 @@
       var email=form.querySelector('input[type=email]').value.trim(), hp=form.querySelector('.hp').value;
       ok.style.display='none'; err.style.display='none';
       if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ err.textContent='That email address doesn’t look right — mind checking it?'; err.style.display='block'; return; }
-      btn.disabled=true; btn.textContent='Sending…';
+      btn.disabled=true; btn.textContent='Getting your kit…';
       fetch(CAPTURE,{method:'POST',headers:{'Content-Type':'application/json'},
         body:JSON.stringify({entity:'ARAI',dba:'Another Realm Gateway',source:form.dataset.source,email:email,_hp:hp})})
       .then(function(r){ if(!r.ok) throw new Error('status '+r.status);
