@@ -30,6 +30,7 @@ textarea#own{width:100%;min-height:96px;border:1px solid #BDB4A4;padding:12px 14
 .qshow{font-size:17px;line-height:1.6;color:var(--ink);background:var(--bg);border:1px solid var(--rule);padding:14px 16px;margin:14px 0 12px}
 .aigrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
 .aigrid a:last-child:nth-child(odd){grid-column:1/-1}
+@media (max-width:360px){.aigrid{grid-template-columns:1fr}.aigrid a:last-child:nth-child(odd){grid-column:auto}}
 .aibtn{display:flex;justify-content:space-between;align-items:center;min-height:56px;padding:0 16px;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:17px}
 .aibtn .aist{font-size:15px;color:var(--muted);font-weight:500;white-space:nowrap}
 .aibtn.done{background:var(--ink);color:var(--bg)}
