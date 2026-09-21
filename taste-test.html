@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F6F3EC">
+<title>The AI taste test — Another Realm Gateway</title>
+<meta name="description" content="Ask ChatGPT, Claude, Gemini and Copilot the same question, compare the answers side by side, and find the AI that fits you.">
+<meta property="og:title" content="The AI taste test — Another Realm Gateway">
+<meta property="og:description" content="Ask ChatGPT, Claude, Gemini and Copilot the same question, compare the answers side by side, and find the AI that fits you.">
+<meta property="og:url" content="https://anotherrealmgateway.com/taste-test">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<style>
+.tw{max-width:760px;margin:0 auto;padding:36px 18px 48px}
+.step{background:var(--paper);border:1px solid var(--rule);padding:22px 20px;margin:18px 0}
+.snum{font-family:var(--serif);font-size:15px;color:var(--accent);letter-spacing:.04em}
+.step h2{font-size:clamp(24px,5vw,30px);margin:6px 0 12px}
+.qopt{display:block;width:100%;text-align:left;background:var(--bg);border:1px solid var(--rule);padding:14px 16px;margin:8px 0;cursor:pointer;font-family:var(--sans);color:var(--body);min-height:48px}
+.qopt b{display:block;color:var(--ink);font-size:17px;margin-bottom:2px}
+.qopt span{font-size:15px}
+.qopt.on{border:2px solid var(--ink);background:#fff}
+textarea#own{width:100%;min-height:96px;border:1px solid #BDB4A4;padding:12px 14px;font-family:var(--sans);font-size:17px;color:var(--ink);margin-top:8px;border-radius:2px}
+.qshow{font-size:17px;line-height:1.6;color:var(--ink);background:var(--bg);border:1px solid var(--rule);padding:14px 16px;margin:14px 0 12px}
+.aigrid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.aibtn{display:flex;justify-content:space-between;align-items:center;min-height:56px;padding:0 16px;border:1px solid var(--ink);background:#fff;color:var(--ink);text-decoration:none;font-weight:600;font-size:17px}
+.aibtn .aist{font-size:15px;color:var(--muted);font-weight:500;white-space:nowrap}
+.aibtn.done{background:var(--ink);color:var(--bg)}
+.aibtn.done .aist{color:#D9D3C7}
+.hint{font-size:15px;color:var(--muted);margin-top:10px}
+.rrow{padding:12px 0;border-bottom:1px solid var(--rule)}
+.rrow:last-child{border-bottom:0}
+.rname{font-family:var(--serif);font-size:20px;color:var(--ink);margin-bottom:8px}
+.rgroup{display:grid;grid-template-columns:repeat(5,1fr);gap:6px}
+.rb{width:100%;height:48px;border:1px solid #BDB4A4;background:#fff;font-family:var(--sans);font-size:16px;font-weight:600;color:var(--ink);cursor:pointer}
+.rb.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.scale{display:flex;justify-content:space-between;font-size:14px;color:var(--muted);margin:10px 0 0}
+.result{display:none;border:2px solid var(--ink);background:#fff;padding:24px 20px;margin:18px 0}
+.result .label{margin-bottom:6px}
+.result h2{margin:4px 0 10px;font-size:clamp(28px,6vw,38px)}
+.result p{font-size:17px}
+.tool-note{font-size:16px;border-left:3px solid var(--accent);padding-left:12px;margin:14px 0}
+</style>
+</head>
+<body><header class="site-head"><div class="wrap"><a class="wordmark" href="/">Another Realm <em>Gateway</em></a></div></header>
+<main class="tw">
+<span class="label">Free · Takes about 10 minutes</span>
+<h1 style="font-size:clamp(36px,8vw,56px);margin:16px 0 14px">The AI <em class="i">taste test.</em></h1>
+<p class="lede">Same question, four AIs. Read the answers side by side and you&rsquo;ll know in minutes which one actually fits you &mdash; no reviews, no hype, just your own judgment.</p>
+
+<section class="step" style="padding-top:22px"><div class="snum">Step 1</div><h2>Pick a question</h2>
+<button class="qopt on" type="button" data-q="dinner"><b>Plan dinners</b><span>Plan three weeknight dinners for a family of four on a $60 budget. Give me&hellip;</span></button><button class="qopt" type="button" data-q="credit"><b>Explain something</b><span>Explain how a credit score works like I'm smart but completely new to it. &hellip;</span></button><button class="qopt" type="button" data-q="text"><b>Write a hard message</b><span>Write a short, polite but firm text to my landlord asking them to fix a ki&hellip;</span></button>
+<button class="qopt" type="button" data-q="own"><b>Use my own question</b><span>Something you actually need help with this week</span></button>
+<textarea id="own" placeholder="Type your question here…" style="display:none"></textarea>
+<div class="qshow" id="qshow"></div>
+<button class="btn" id="copyq" type="button" style="width:100%">Copy this question</button>
+</section>
+
+<section class="step"><div class="snum">Step 2</div><h2>Ask all four</h2>
+<p>Tap each one, paste your question, and read the answer. Then come back here.</p>
+<div class="aigrid"><a class="aibtn" href="https://chatgpt.com" target="_blank" rel="noopener" data-ai="chatgpt"><span class="ainame">ChatGPT</span><span class="aist">Open</span></a><a class="aibtn" href="https://claude.ai" target="_blank" rel="noopener" data-ai="claude"><span class="ainame">Claude</span><span class="aist">Open</span></a><a class="aibtn" href="https://gemini.google.com" target="_blank" rel="noopener" data-ai="gemini"><span class="ainame">Gemini</span><span class="aist">Open</span></a><a class="aibtn" href="https://copilot.microsoft.com" target="_blank" rel="noopener" data-ai="copilot"><span class="ainame">Copilot</span><span class="aist">Open</span></a></div>
+<p class="hint">Don&rsquo;t have an account for one of them? Skip it &mdash; three is still a fair test. They&rsquo;re all free to try.</p>
+</section>
+
+<section class="step"><div class="snum">Step 3</div><h2>Score each answer</h2>
+<p>How useful was it? 1 = not at all, 5 = I&rsquo;d use it as-is.</p>
+<div class="rrow" data-ai="chatgpt"><div class="rname">ChatGPT</div>
+ <div class="rgroup" role="group" aria-label="How useful was ChatGPT's answer?"><button type="button" class="rb" data-v="1" aria-label="1 out of 5">1</button><button type="button" class="rb" data-v="2" aria-label="2 out of 5">2</button><button type="button" class="rb" data-v="3" aria-label="3 out of 5">3</button><button type="button" class="rb" data-v="4" aria-label="4 out of 5">4</button><button type="button" class="rb" data-v="5" aria-label="5 out of 5">5</button></div></div><div class="rrow" data-ai="claude"><div class="rname">Claude</div>
+ <div class="rgroup" role="group" aria-label="How useful was Claude's answer?"><button type="button" class="rb" data-v="1" aria-label="1 out of 5">1</button><button type="button" class="rb" data-v="2" aria-label="2 out of 5">2</button><button type="button" class="rb" data-v="3" aria-label="3 out of 5">3</button><button type="button" class="rb" data-v="4" aria-label="4 out of 5">4</button><button type="button" class="rb" data-v="5" aria-label="5 out of 5">5</button></div></div><div class="rrow" data-ai="gemini"><div class="rname">Gemini</div>
+ <div class="rgroup" role="group" aria-label="How useful was Gemini's answer?"><button type="button" class="rb" data-v="1" aria-label="1 out of 5">1</button><button type="button" class="rb" data-v="2" aria-label="2 out of 5">2</button><button type="button" class="rb" data-v="3" aria-label="3 out of 5">3</button><button type="button" class="rb" data-v="4" aria-label="4 out of 5">4</button><button type="button" class="rb" data-v="5" aria-label="5 out of 5">5</button></div></div><div class="rrow" data-ai="copilot"><div class="rname">Copilot</div>
+ <div class="rgroup" role="group" aria-label="How useful was Copilot's answer?"><button type="button" class="rb" data-v="1" aria-label="1 out of 5">1</button><button type="button" class="rb" data-v="2" aria-label="2 out of 5">2</button><button type="button" class="rb" data-v="3" aria-label="3 out of 5">3</button><button type="button" class="rb" data-v="4" aria-label="4 out of 5">4</button><button type="button" class="rb" data-v="5" aria-label="5 out of 5">5</button></div></div>
+<button class="btn" id="reveal" type="button" style="width:100%;margin-top:16px">Show my winner</button>
+</section>
+
+<section class="result" id="result" aria-live="polite">
+<span class="label">Your winner</span>
+<h2 id="wname"></h2>
+<p id="wtext"></p>
+<div class="tool-note" id="wnote"></div>
+<p>Now make it even better: the free AI Starter Kit has ten prompts built to get this kind of answer every time.</p>
+<a class="btn" href="/starter" style="width:100%;margin-top:6px">Get the free Starter Kit</a>
+</section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
+<span><a href="/mission">Mission</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp; <a href="mailto:hello@anotherrealmgateway.com">hello@anotherrealmgateway.com</a></span>
+</div></footer><script>
+var Q={"dinner":"Plan three weeknight dinners for a family of four on a $60 budget. Give me the menu, a combined shopping list grouped by store section, and a prep order so I spend under 45 minutes a night.","credit":"Explain how a credit score works like I'm smart but completely new to it. Then give me three realistic ways to raise mine over the next 12 months, and one common mistake to avoid.","text":"Write a short, polite but firm text to my landlord asking them to fix a kitchen faucet that has been leaking for two weeks. I've asked once already. Give me two versions: one friendly, one more direct."}, cur="dinner", scores={};
+var NOTES={chatgpt:"The all-rounder. Strong free plan with unlimited everyday chat, plus images and voice.",
+claude:"Known for writing that sounds human and for handling long documents carefully.",
+gemini:"Lives inside Google &mdash; handy if your email and documents are already in Gmail and Docs.",
+copilot:"Built into Microsoft 365 &mdash; worth a look if your work runs on Word, Excel and Outlook."};
+var NAMES={chatgpt:"ChatGPT",claude:"Claude",gemini:"Gemini",copilot:"Copilot"};
+function qtext(){return cur==="own"?document.getElementById("own").value.trim():Q[cur];}
+function show(){var t=qtext();document.getElementById("qshow").textContent=t||"Type your question above.";}
+document.querySelectorAll(".qopt").forEach(function(b){b.addEventListener("click",function(){
+ document.querySelectorAll(".qopt").forEach(function(x){x.classList.remove("on")});b.classList.add("on");cur=b.dataset.q;
+ document.getElementById("own").style.display=cur==="own"?"block":"none";if(cur==="own")document.getElementById("own").focus();show();})});
+document.getElementById("own").addEventListener("input",show);
+document.getElementById("copyq").addEventListener("click",function(){var b=this,t=qtext();if(!t)return;
+ function done(ok){b.textContent=ok?"Copied — now open each AI below":"Press and hold the question to copy it";setTimeout(function(){b.textContent="Copy this question"},3000);}
+ if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(function(){done(true)},function(){done(false)});}
+ else{var a=document.createElement("textarea");a.value=t;document.body.appendChild(a);a.select();var ok=false;try{ok=document.execCommand("copy")}catch(e){}a.remove();done(ok);}});
+document.querySelectorAll(".aibtn").forEach(function(a){a.addEventListener("click",function(){a.classList.add("done");a.querySelector(".aist").textContent="Opened ✓";})});
+document.querySelectorAll(".rrow").forEach(function(r){r.querySelectorAll(".rb").forEach(function(b){b.addEventListener("click",function(){
+ r.querySelectorAll(".rb").forEach(function(x){x.classList.remove("on")});b.classList.add("on");scores[r.dataset.ai]=+b.dataset.v;})})});
+document.getElementById("reveal").addEventListener("click",function(){
+ var keys=Object.keys(scores);var res=document.getElementById("result");
+ if(!keys.length){document.getElementById("wname").textContent="Score at least one answer first";document.getElementById("wtext").textContent="Tap a number next to each AI you tried.";document.getElementById("wnote").style.display="none";res.style.display="block";return;}
+ var top=Math.max.apply(null,keys.map(function(k){return scores[k]}));var win=keys.filter(function(k){return scores[k]===top});
+ document.getElementById("wnote").style.display="block";
+ if(win.length===1){document.getElementById("wname").textContent=NAMES[win[0]];
+  document.getElementById("wtext").textContent="For this kind of question, "+NAMES[win[0]]+" gave you the most useful answer. Start there — and try another question type next time, because the winner often changes.";
+  document.getElementById("wnote").innerHTML=NOTES[win[0]];}
+ else{var n=win.map(function(k){return NAMES[k]});document.getElementById("wname").textContent="A tie: "+n.join(" & ");
+  document.getElementById("wtext").textContent="Both did well. Pick the one whose answer sounded more like you — that’s the one you’ll actually keep using.";
+  document.getElementById("wnote").innerHTML=win.map(function(k){return "<b>"+NAMES[k]+":</b> "+NOTES[k]}).join("<br>");}
+ res.style.display="block";res.scrollIntoView({behavior:"smooth",block:"start"});});
+show();var y=document.getElementById("yr");if(y)y.textContent=new Date().getFullYear();
+</script></body></html>

@@ -16,6 +16,11 @@
   to = "/kit.html"
   status = 200
 
+[[redirects]]
+  from = "/taste-test"
+  to = "/taste-test.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]
