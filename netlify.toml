@@ -21,6 +21,16 @@
   to = "/taste-test.html"
   status = 200
 
+[[redirects]]
+  from = "/learn"
+  to = "/learn.html"
+  status = 200
+
+[[redirects]]
+  from = "/learn/remember"
+  to = "/learn-remember.html"
+  status = 200
+
 [[headers]]
   for = "/*"
   [headers.values]

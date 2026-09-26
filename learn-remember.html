@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#F6F3EC">
+<title>Make AI remember you — Lesson 01 — Another Realm Gateway</title>
+<meta name="description" content="Set AI up once so it knows who you are and how you like answers. A free five-minute walkthrough for ChatGPT, Claude, Gemini, Copilot and Grok.">
+<meta property="og:title" content="Make AI remember you — Lesson 01 — Another Realm Gateway">
+<meta property="og:description" content="Set AI up once so it knows who you are and how you like answers. A free five-minute walkthrough for ChatGPT, Claude, Gemini, Copilot and Grok.">
+<meta property="og:url" content="https://anotherrealmgateway.com/learn/remember">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/favicon-180.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<style>
+.lwrap{max-width:760px;margin:0 auto;padding:0 18px}
+.lessons{display:grid;gap:16px;margin-top:8px}
+.lcard{display:block;background:var(--paper);border:1px solid var(--rule);padding:22px 22px 20px;text-decoration:none;color:inherit}
+.lcard:hover{border-color:var(--ink)}
+.lcard .num{font-family:var(--serif);font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
+.lcard h3{font-family:var(--serif);font-size:25px;line-height:1.25;margin:6px 0 8px;color:var(--ink);font-weight:400}
+.lcard p{font-size:17px;line-height:1.6;color:var(--body);margin:0}
+.lcard .go{display:inline-block;margin-top:14px;font-size:16px;font-weight:600;color:var(--accent)}
+.soon{background:var(--soft);border-style:dashed}
+.soon .go{color:var(--muted)}
+.step{background:var(--paper);border:1px solid var(--rule);padding:24px 20px 20px;margin:18px 0}
+.step .n{font-family:var(--serif);font-size:15px;letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
+.step h2{font-family:var(--serif);font-size:27px;line-height:1.25;margin:6px 0 12px;font-weight:400}
+.step p{font-size:17px;line-height:1.65;color:var(--body);margin:0 0 12px}
+.ptxt{background:var(--bg);border:1px solid var(--rule);padding:16px 18px;font-size:16px;line-height:1.6;color:var(--ink);margin:6px 0 12px}
+.raw{position:absolute;left:-9999px;opacity:0}
+.paths{width:100%;border-collapse:collapse;margin:4px 0 12px}
+.paths th,.paths td{text-align:left;padding:11px 10px 11px 0;border-bottom:1px solid var(--rule);vertical-align:top;font-size:16px;line-height:1.5}
+.paths th{width:104px;white-space:nowrap;color:var(--ink);font-weight:600}
+.paths td{color:var(--body)}
+.next{border-top:2px solid var(--accent);padding-top:22px;margin-top:34px}
+.sharebar{margin:26px 0 0}
+</style>
+</head>
+<body><header class="site-head"><div class="wrap">
+<a class="wordmark" href="/">Another Realm <em>Gateway</em></a>
+<nav class="nav" aria-label="Main">
+<a class="hide-m" href="/#kit">The Kit</a>
+<a class="hide-m" href="/learn">Learn</a>
+<a class="hide-m" href="/mission">Mission</a>
+<a class="btn sm" href="/#kit"><span class="long">Get the free kit</span><span class="short">Free kit</span></a>
+</nav></div></header>
+<main>
+<section class="hero" style="padding:0"><div class="wrap"><div class="lwrap">
+<span class="label">Lesson 01 &middot; Beginner</span>
+<h1 style="margin-top:10px">Make AI <em class="i">remember you.</em></h1>
+<div class="rule"></div>
+<p class="lede">Right now, every new chat starts from zero. Your AI doesn&rsquo;t know your job, what you&rsquo;re working on, or how you like answers &mdash; so you get answers written for &ldquo;anyone.&rdquo; Five minutes fixes that for good.</p>
+<p style="font-size:16px;color:var(--muted);margin-top:14px">Works in ChatGPT, Claude, Gemini, Copilot and Grok. Free plans included.</p>
+</div></div></section>
+
+<section><div class="wrap"><div class="lwrap">
+
+<div class="step">
+<span class="n">Step 1</span>
+<h2>Let the AI write it for you</h2>
+<p>Most people freeze at the empty box. So don&rsquo;t write it yourself &mdash; have the AI interview you and write it for you. Copy this and paste it into whichever AI you use most:</p>
+<div class="ptxt">I want to set up my AI so it knows me. Interview me to write my custom instructions. Ask me one short question at a time, 6 questions at most, about what I do day to day, what I most want help with, how much I know about AI, and how I like answers (short or detailed, casual or formal). When you&#x27;re done, write two short sections I can copy: &quot;About me&quot; and &quot;How I want you to answer.&quot; Keep the whole thing under 1,000 characters, in plain first-person sentences.</div>
+<textarea class="raw" id="r1" aria-hidden="true" tabindex="-1">I want to set up my AI so it knows me. Interview me to write my custom instructions. Ask me one short question at a time, 6 questions at most, about what I do day to day, what I most want help with, how much I know about AI, and how I like answers (short or detailed, casual or formal). When you&#x27;re done, write two short sections I can copy: &quot;About me&quot; and &quot;How I want you to answer.&quot; Keep the whole thing under 1,000 characters, in plain first-person sentences.</textarea>
+<button class="btn copy" data-n="1" type="button">Copy prompt</button>
+<p style="margin-top:14px">Answer its questions honestly &mdash; short answers are fine. At the end it hands you two tidy paragraphs. Those are your instructions.</p>
+</div>
+
+<div class="step">
+<span class="n">Step 2</span>
+<h2>Paste it into your settings</h2>
+<p>Every big AI app has one box that it reads before every chat. Here&rsquo;s where it lives:</p>
+<table class="paths">
+<tr><th>ChatGPT</th><td>Settings &rarr; Personalization &rarr; Custom instructions</td></tr>
+<tr><th>Claude</th><td>Settings &rarr; Instructions for Claude</td></tr>
+<tr><th>Gemini</th><td>Settings &rarr; Personal context &rarr; Your instructions for Gemini</td></tr>
+<tr><th>Copilot</th><td>Settings and more (&hellip;) &rarr; Chat settings &rarr; Personalization &rarr; Custom instructions</td></tr>
+<tr><th>Grok</th><td>Settings &rarr; Customize &rarr; Custom instructions</td></tr>
+</table>
+<p style="font-size:16px;color:var(--muted)">Menu looks different? These apps move things around. Open your settings and search for the word <strong>instructions</strong> &mdash; that finds it in all five.</p>
+</div>
+
+<div class="step">
+<span class="n">Step 3</span>
+<h2>Test it, so you can see the difference</h2>
+<p>Open a brand-new chat and ask something you asked last week. You should notice it skipping the generic warm-up and getting to the part that actually applies to you.</p>
+<p>If the answers feel too formal, too long, or not quite right, go back to the box and change a line. This isn&rsquo;t permanent &mdash; you can edit it any time, and the next chat picks up the change.</p>
+</div>
+
+<div class="step">
+<span class="n">One more thing</span>
+<h2>Memory is the other half</h2>
+<p>Most of these apps also have a <strong>Memory</strong> setting, usually in the same area. Instructions are what you tell it on purpose. Memory is what it picks up from your chats over time. You can open it, read what it saved, and delete anything you don&rsquo;t want kept &mdash; worth a look either way, just so you know what&rsquo;s there.</p>
+</div>
+
+<div class="next">
+<span class="label">Next lesson</span>
+<h2 style="font-family:var(--serif);font-weight:400;font-size:27px;margin:8px 0 10px">Keep more than one set</h2>
+<p style="font-size:17px;line-height:1.65;color:var(--body)">One set of instructions is good. A few sets you can swap between &mdash; one for work, one for job hunting, one for home &mdash; is better. That&rsquo;s Lesson 02, coming next. Get the emails below and it&rsquo;ll land in your inbox.</p>
+</div>
+
+<div class="sharebar" data-share data-title="Make AI remember you" data-text="This took five minutes and made every AI answer better. Free walkthrough:"></div>
+
+</div></div></section>
+<section class="signup" id="signup"><div class="wrap"><div class="card bandcard">
+<span class="label">Stay in the loop &middot; Free</span>
+<div class="card-title">Free AI tips, tricks and techniques, sent to you.</div>
+<p class="bandsub">Start with the free AI Starter Kit right away. Then new lessons and prompts as we make them &mdash; short emails that teach you one new idea at a time. One click to unsubscribe.</p>
+<form data-lead data-source="web:home" novalidate>
+<label for="email-learn" style="position:absolute;left:-9999px">Email address</label>
+<input type="email" id="email-learn" placeholder="Your email address" autocomplete="email" inputmode="email" required>
+<input type="text" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+<button class="btn" type="submit">Keep me posted</button>
+</form>
+<div class="msg ok" role="status"></div>
+<div class="msg err" role="alert"></div>
+</div></div></section>
+</main>
+<footer class="site-foot"><div class="wrap">
+<span>&copy; <span id="yr">2026</span> Another Realm AI International Inc. &middot; Another Realm Gateway</span>
+<span><a href="/learn">Lessons</a> &nbsp;&middot;&nbsp; <a href="/mission">Mission</a> &nbsp;&middot;&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;&middot;&nbsp; <a href="mailto:info@anotherrealmgateway.com">info@anotherrealmgateway.com</a></span>
+</div></footer><script src="/assets/lead.js" defer></script><script src="/assets/share.js" defer></script>
+<script>var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();</script>
+<script>
+function copyText(n){var raw=document.getElementById('r'+n),t=raw.value;
+ if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t).then(function(){return true},function(){return fb()})}return Promise.resolve(fb());
+ function fb(){raw.style.position='fixed';raw.style.left='0';raw.focus();raw.select();raw.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}raw.style.position='absolute';raw.style.left='-9999px';raw.blur();return ok}}
+document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){copyText(b.dataset.n).then(function(ok){
+ b.textContent=ok?'Copied — now paste it into your AI':'Press and hold the text above to copy';if(ok)b.classList.add('done');
+ setTimeout(function(){b.classList.remove('done');b.textContent='Copy prompt'},3200)})})});
+</script></body></html>

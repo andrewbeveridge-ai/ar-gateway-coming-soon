@@ -123,6 +123,7 @@ mark{background:var(--mark);color:var(--ink);padding:1px 4px;font-weight:600}
   <textarea class="raw" id="r10" aria-hidden="true" tabindex="-1">Here&#x27;s something I wrote: [paste — resume, post, email, essay]. Its goal is [what it needs to do]. Be a tough but fair editor: list the 3 biggest problems in order of importance, explain why each one hurts, then give me a revised version that fixes them. Don&#x27;t soften the feedback.</textarea>
   <button class="btn copy" data-n="10" type="button">Copy prompt</button>
 </article>
+<div class="sharebar" style="margin:30px 0 0" data-share data-title="10 AI prompts you can copy" data-text="Found a free page of AI prompts that actually help. Copy one, paste it into any AI, done:"></div>
 <div style="margin-top:36px"><div class="card" id="kit">
 <span class="label">Free</span>
 <div class="card-title">Got this link from a friend? Get the full kit.</div>
@@ -143,7 +144,7 @@ mark{background:var(--mark);color:var(--ink);padding:1px 4px;font-weight:600}
 <footer class="site-foot"><div class="wrap">
 <span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
 <span><a href="/mission">Mission</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp; <a href="mailto:info@anotherrealmgateway.com">info@anotherrealmgateway.com</a></span>
-</div></footer><script src="/assets/lead.js" defer></script><script>
+</div></footer><script src="/assets/lead.js" defer></script><script src="/assets/share.js" defer></script><script>
 function copyText(n){var raw=document.getElementById('r'+n),t=raw.value;
  if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t).then(function(){return true},function(){return fb()})}return Promise.resolve(fb());
  function fb(){raw.style.position='fixed';raw.style.left='0';raw.focus();raw.select();raw.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}raw.style.position='absolute';raw.style.left='-9999px';raw.blur();return ok}}
