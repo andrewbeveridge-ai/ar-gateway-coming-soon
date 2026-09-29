@@ -41,7 +41,16 @@ mark{background:var(--mark);color:var(--ink);padding:1px 4px;font-weight:600}
 .tipbox strong{font-family:var(--serif);font-weight:400;font-size:22px;color:var(--ink);display:block;margin-bottom:6px}
 </style>
 </head>
-<body><header class="site-head"><div class="wrap"><a class="wordmark" href="/">Another Realm <em>Gateway</em></a></div></header>
+<body><header class="site-head"><div class="wrap">
+<a class="wordmark" href="/">Another Realm <em>Gateway</em></a>
+<nav class="nav" aria-label="Main">
+<a class="hide-m" href="/learn">Lessons</a>
+<a class="hide-m" href="/#kit">The Kit</a>
+<a class="hide-m" href="/taste-test">Taste test</a>
+<a class="hide-m" href="/mission">Mission</a>
+<a class="btn sm" href="/#kit"><span class="long">Get the free kit</span><span class="short">Free kit</span></a>
+</nav>
+</div></header>
 <main class="kwrap" style="padding-top:36px;padding-bottom:40px">
 <span class="label">AI Starter Kit · Companion</span>
 <h1 style="font-size:clamp(34px,7vw,48px);margin:16px 0 14px">Your ten prompts, <em class="i">ready to copy.</em></h1>
@@ -143,8 +152,7 @@ mark{background:var(--mark);color:var(--ink);padding:1px 4px;font-weight:600}
 </main>
 <footer class="site-foot"><div class="wrap">
 <span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
-<span><a href="/mission">Mission</a> &nbsp;·&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;·&nbsp; <a href="mailto:info@anotherrealmgateway.com">info@anotherrealmgateway.com</a></span>
-</div></footer><script src="/assets/lead.js" defer></script><script src="/assets/share.js" defer></script><script>
+<span><a href="/learn">Lessons</a> &nbsp;&middot;&nbsp; <a href="/taste-test">Taste test</a> &nbsp;&middot;&nbsp; <a href="/mission">Mission</a> &nbsp;&middot;&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;&middot;&nbsp; <a href="mailto:info@anotherrealmgateway.com">info@anotherrealmgateway.com</a></span></div></footer><script src="/assets/lead.js" defer></script><script src="/assets/share.js" defer></script><script>
 function copyText(n){var raw=document.getElementById('r'+n),t=raw.value;
  if(navigator.clipboard&&window.isSecureContext){return navigator.clipboard.writeText(t).then(function(){return true},function(){return fb()})}return Promise.resolve(fb());
  function fb(){raw.style.position='fixed';raw.style.left='0';raw.focus();raw.select();raw.setSelectionRange(0,t.length);var ok=false;try{ok=document.execCommand('copy')}catch(e){}raw.style.position='absolute';raw.style.left='-9999px';raw.blur();return ok}}
