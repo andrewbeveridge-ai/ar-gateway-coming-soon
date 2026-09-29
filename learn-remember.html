@@ -43,13 +43,21 @@
 </head>
 <body><header class="site-head"><div class="wrap">
 <a class="wordmark" href="/">Another Realm <em>Gateway</em></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><span></span></button>
 <nav class="nav" aria-label="Main">
 <a class="hide-m" href="/learn">Lessons</a>
 <a class="hide-m" href="/#kit">The Kit</a>
 <a class="hide-m" href="/taste-test">Taste test</a>
 <a class="hide-m" href="/mission">Mission</a>
 <a class="btn sm" href="/#kit"><span class="long">Get the free kit</span><span class="short">Free kit</span></a>
-</nav></div></header>
+</nav></div>
+<div class="mobile-nav" id="mnav"><div class="wrap">
+<a href="/learn">Lessons</a>
+<a href="/#kit">The Kit</a>
+<a href="/taste-test">Taste test</a>
+<a href="/mission">Mission</a>
+</div></div>
+</header>
 <main>
 <section class="hero" style="padding:0"><div class="wrap"><div class="lwrap">
 <span class="label">Lesson 01 &middot; Beginner</span>
@@ -132,4 +140,5 @@ function copyText(n){var raw=document.getElementById('r'+n),t=raw.value;
 document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click',function(){copyText(b.dataset.n).then(function(ok){
  b.textContent=ok?'Copied — now paste it into your AI':'Press and hold the text above to copy';if(ok)b.classList.add('done');
  setTimeout(function(){b.classList.remove('done');b.textContent='Copy prompt'},3200)})})});
-</script></body></html>
+</script><script>(function(){var b=document.querySelector(".menu-btn"),m=document.getElementById("mnav");if(!b||!m)return;b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false")})})();</script>
+</body></html>

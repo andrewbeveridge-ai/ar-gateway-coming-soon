@@ -43,6 +43,7 @@ mark{background:var(--mark);color:var(--ink);padding:1px 4px;font-weight:600}
 </head>
 <body><header class="site-head"><div class="wrap">
 <a class="wordmark" href="/">Another Realm <em>Gateway</em></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><span></span></button>
 <nav class="nav" aria-label="Main">
 <a class="hide-m" href="/learn">Lessons</a>
 <a class="hide-m" href="/#kit">The Kit</a>
@@ -50,7 +51,14 @@ mark{background:var(--mark);color:var(--ink);padding:1px 4px;font-weight:600}
 <a class="hide-m" href="/mission">Mission</a>
 <a class="btn sm" href="/#kit"><span class="long">Get the free kit</span><span class="short">Free kit</span></a>
 </nav>
-</div></header>
+</div>
+<div class="mobile-nav" id="mnav"><div class="wrap">
+<a href="/learn">Lessons</a>
+<a href="/#kit">The Kit</a>
+<a href="/taste-test">Taste test</a>
+<a href="/mission">Mission</a>
+</div></div>
+</header>
 <main class="kwrap" style="padding-top:36px;padding-bottom:40px">
 <span class="label">AI Starter Kit · Companion</span>
 <h1 style="font-size:clamp(34px,7vw,48px);margin:16px 0 14px">Your ten prompts, <em class="i">ready to copy.</em></h1>
@@ -160,4 +168,5 @@ document.querySelectorAll('.copy').forEach(function(b){b.addEventListener('click
  b.textContent=ok?'Copied — now paste it into your AI':'Press and hold the text above to copy';if(ok)b.classList.add('done');
  setTimeout(function(){b.classList.remove('done');b.textContent='Copy prompt'},3200)})})});
 var y=document.getElementById('yr');if(y)y.textContent=new Date().getFullYear();
-</script></body></html>
+</script><script>(function(){var b=document.querySelector(".menu-btn"),m=document.getElementById("mnav");if(!b||!m)return;b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false")})})();</script>
+</body></html>

@@ -21,13 +21,21 @@
 </head>
 <body><header class="site-head"><div class="wrap">
 <a class="wordmark" href="/">Another Realm <em>Gateway</em></a>
+<button class="menu-btn" type="button" aria-expanded="false" aria-controls="mnav" aria-label="Menu"><span></span></button>
 <nav class="nav" aria-label="Main">
 <a class="hide-m" href="/learn">Lessons</a>
 <a class="hide-m" href="/#kit">The Kit</a>
 <a class="hide-m" href="/taste-test">Taste test</a>
 <a class="hide-m" href="/mission">Mission</a>
 <a class="btn sm" href="/#kit"><span class="long">Get the free kit</span><span class="short">Free kit</span></a>
-</nav></div></header>
+</nav></div>
+<div class="mobile-nav" id="mnav"><div class="wrap">
+<a href="/learn">Lessons</a>
+<a href="/#kit">The Kit</a>
+<a href="/taste-test">Taste test</a>
+<a href="/mission">Mission</a>
+</div></div>
+</header>
 <main>
 <section class="hero" style="padding:0"><div class="wrap">
   <div>
@@ -55,6 +63,14 @@
 <div class="msg err" role="alert"></div>
 <p class="small" style="margin-top:14px">Instant download, plus the links in your inbox. After that, a few short emails that teach you one new idea at a time. One click to unsubscribe.</p>
 </div>
+</div></section>
+
+<section style="padding-top:clamp(30px,5vw,48px)"><div class="wrap">
+  <div class="sec-head"><span class="label">What this is</span>
+  <h2>Free lessons for everyday people who want AI to <em class="i">actually do something</em> for them.</h2>
+  <p class="lede">Gateway is for people using AI in real life and real work &mdash; the nurse charting after a twelve-hour shift, the contractor writing an estimate at the kitchen table, the office manager buried in forms, the person sending out resumes and hearing nothing back. Short lessons in plain words, real examples, and everything you learn works the same day you learn it.</p>
+  <p class="lede" style="margin-top:14px">No jargon. No gatekeeping. Nothing held back behind a paywall.</p></div>
+  <p class="small" style="margin-top:4px;font-size:17px"><a href="/#kit" style="color:var(--accent);font-weight:600">Start with the free kit</a> &nbsp;&middot;&nbsp; <a href="/taste-test" style="color:var(--accent);font-weight:600">Try the taste test</a> &nbsp;&middot;&nbsp; <a href="/learn" style="color:var(--accent);font-weight:600">Browse the lessons</a></p>
 </div></section>
 
 <section class="band"><div class="wrap">
@@ -101,7 +117,7 @@
 <section class="band"><div class="wrap">
   <div class="sec-head"><span class="label">Try it now &middot; Free</span><h2>Which AI is right for <em class="i">you?</em></h2>
   <p class="lede">There are five big ones and they are not the same. Ask all five the same question, read the answers side by side, and pick the one that sounds like you. About ten minutes, nothing to install, no sign-up.</p></div>
-  <p style="margin-top:6px"><a class="btn" href="/taste-test">Take the AI taste test</a></p>
+  <p style="margin-top:6px"><a class="btn" href="/taste-test">Try the AI taste test</a></p>
 </div></section>
 
 <section><div class="wrap two">
@@ -133,4 +149,5 @@
 </main>
 <footer class="site-foot"><div class="wrap">
 <span>© <span id="yr">2026</span> Another Realm AI International Inc. · Another Realm Gateway</span>
-<span><a href="/learn">Lessons</a> &nbsp;&middot;&nbsp; <a href="/taste-test">Taste test</a> &nbsp;&middot;&nbsp; <a href="/mission">Mission</a> &nbsp;&middot;&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;&middot;&nbsp; <a href="mailto:info@anotherrealmgateway.com">info@anotherrealmgateway.com</a></span></div></footer><script src="/assets/lead.js" defer></script></body></html>
+<span><a href="/learn">Lessons</a> &nbsp;&middot;&nbsp; <a href="/taste-test">Taste test</a> &nbsp;&middot;&nbsp; <a href="/mission">Mission</a> &nbsp;&middot;&nbsp; <a href="https://www.tiktok.com/@argateway" target="_blank" rel="noopener">TikTok</a> &nbsp;&middot;&nbsp; <a href="mailto:info@anotherrealmgateway.com">info@anotherrealmgateway.com</a></span></div></footer><script src="/assets/lead.js" defer></script><script>(function(){var b=document.querySelector(".menu-btn"),m=document.getElementById("mnav");if(!b||!m)return;b.addEventListener("click",function(){var o=m.classList.toggle("open");b.setAttribute("aria-expanded",o?"true":"false")})})();</script>
+</body></html>

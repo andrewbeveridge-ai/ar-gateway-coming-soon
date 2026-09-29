@@ -152,3 +152,33 @@ input[type=email]:focus{border-color:var(--ink)}
   .btn.sm{padding:0 12px;font-size:14px}
   .site-head .wrap{gap:10px}
 }
+
+/* Mobile menu (2026-09-29). Nav links are hidden below 880px by .hide-m,
+   which left phones with no navigation at all. The toggle below reveals
+   them in a panel under the sticky header. Desktop is untouched. */
+.menu-btn{display:none;align-items:center;justify-content:center;width:46px;height:46px;margin-left:auto;
+  background:transparent;border:1px solid var(--rule);border-radius:4px;cursor:pointer;padding:0}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--ink);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.menu-btn[aria-expanded="true"] span{background:transparent}
+.menu-btn[aria-expanded="true"] span::before{top:0;transform:rotate(45deg)}
+.menu-btn[aria-expanded="true"] span::after{top:0;transform:rotate(-45deg)}
+.mobile-nav{display:none;border-top:1px solid var(--rule);background:var(--bg)}
+.mobile-nav.open{display:block}
+.mobile-nav .wrap{display:block;min-height:0;padding-top:4px;padding-bottom:10px}
+.mobile-nav a{display:block;padding:15px 0;font-size:17px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--rule)}
+.mobile-nav a:last-child{border-bottom:0}
+@media (max-width:880px){
+  .menu-btn{display:flex;margin-left:auto;flex:0 0 auto}
+  /* header is wordmark + burger + kit button; keep all three inside 320px */
+  .site-head .wrap{gap:10px;flex-wrap:nowrap}
+  .wordmark{flex:0 1 auto;min-width:0}
+  .nav{margin-left:0;flex:0 0 auto;gap:8px}
+  .btn.sm{padding:0 12px;font-size:14px;white-space:nowrap}
+}
+@media (max-width:420px){
+  .wordmark{font-size:17px}
+  .menu-btn{width:42px;height:42px}
+}
+@media (min-width:881px){.mobile-nav{display:none !important}}
