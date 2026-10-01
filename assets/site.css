@@ -182,3 +182,22 @@ input[type=email]:focus{border-color:var(--ink)}
   .menu-btn{width:42px;height:42px}
 }
 @media (min-width:881px){.mobile-nav{display:none !important}}
+
+/* Keyhole mark in the wordmark (2026-10-01). The anchor becomes a flex row so
+   the mark and the text sit on one baseline; .wm-t keeps the text as a single
+   nowrap unit so it never splits around the mark. Mark shrinks on small
+   phones to protect the header from horizontal overflow. */
+.wordmark{display:inline-flex;align-items:center;gap:10px;min-width:0}
+.wordmark .mark{width:27px;height:27px;flex:0 0 auto;display:block}
+.wordmark .wm-t{min-width:0;white-space:nowrap}
+/* Narrow phones: drop "Another Realm" rather than truncate the name to an
+   ellipsis. The mark carries the brand and "Gateway" stays fully legible. */
+@media (max-width:520px){ .wordmark .wm-a{display:none} }
+@media (max-width:880px){
+  .wordmark{gap:8px}
+  .wordmark .mark{width:24px;height:24px}
+}
+@media (max-width:400px){
+  .wordmark{gap:7px}
+  .wordmark .mark{width:21px;height:21px}
+}
